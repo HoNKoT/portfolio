@@ -6,10 +6,13 @@ font-family: 'Passion One', cursive;
 */
 /* colors
 android   : a4c600
+ios       : 333333
 webdesign : 21759b
 
                          light /  dark
 android circle border : ffff00 / 6d8701;
+ios     circle border : fbb03b / 1a1a1a;
+web     circle border : 7ac943 / 1b1464;
 */
 
 .fontandroid {
@@ -44,6 +47,7 @@ html, body {
 }
 
 body, p {
+	color: #333;
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 300;
 	font-size: 18px;
@@ -117,7 +121,7 @@ section#topimage section:last-child {
 section#topimage section p, section#topimage section h2 {
 	/*reset for bootstrap*/
 	margin: 0px;
-
+	color: white;
 	font-weight: 100;
 }
 
@@ -174,6 +178,7 @@ section#s_android h3, section#s_ios h3, section#s_webdesign h3 {
 }
 
 section#skills p {
+	color: white;
 	font-size: 16px;
 	font-weight: 100;
 }
@@ -199,6 +204,7 @@ section#skills p span {
 .prec {
     top: 35px;
     position: relative;
+    font-weight: 100;
 }
 
 .circle {
@@ -230,6 +236,144 @@ section#skills p span {
 }
 
 /* main > works ---------------------------------------------------------------- */
+
+section#works h3 {
+	text-align: center;
+}
+
+section#works a {
+	text-decoration: none;
+}
+
+section#works h4 {
+	font-size: 20px;
+	margin: 0px;
+}
+
+section#works h4 span {
+	color: gray;
+	margin-left: 15px;
+	font-size: 14px;
+	font-weight: 100;
+	font-style: italic;
+}
+
+section#works dl {
+	padding: 20px;
+	border: solid 1px;
+
+	background: transparent;
+	-webkit-transition: background .5s ease-in-out;
+	   -moz-transition: background .5s ease-in-out;
+	    -ms-transition: background .5s ease-in-out;
+	     -o-transition: background .5s ease-in-out;
+	        transition: background .5s ease-in-out;
+}
+
+section#works dl, section#works dl h4, section#works dl p, section#works dl span {
+	-webkit-transition: color .5s ease-in-out;
+	   -moz-transition: color .5s ease-in-out;
+	    -ms-transition: color .5s ease-in-out;
+	     -o-transition: color .5s ease-in-out;
+	        transition: color .5s ease-in-out;
+
+	-webkit-transition: background .4s ease-in-out;
+	   -moz-transition: background .4s ease-in-out;
+	    -ms-transition: background .4s ease-in-out;
+	     -o-transition: background .4s ease-in-out;
+	        transition: background .4s ease-in-out;
+}  
+
+section#works dl div {
+	height: 30px;
+	margin: 5px 0px;
+}
+
+section#works dl div span {
+	display: inline-block;
+	padding-top: 2px;
+	margin-right: 15px;
+	text-align: center;
+
+	width: 120px;
+	line-height: 1.25em;
+	font-size: 16px;
+	font-weight: 100;
+	color: white;
+}
+
+section#works dt p {
+	margin:0px;
+	padding-top: 2px;
+	line-height: 1.375em;
+}
+
+section#works dl:hover h4, section#works dl:hover p, section#works dl:hover h4 span  {
+	color: white;
+}
+
+section#works .w_android h4 {
+	color: #a4c600;
+}
+
+section#works .w_android dl {
+	border-color: #a4c600;
+}
+
+section#works .w_android dl div span {
+	background-color: #a4c600;
+}
+
+section#works .w_android dl:hover {
+	background-color: #a4c600;
+}
+
+section#works .w_android dl:hover div span {
+	background-color: white;
+	color: #a4c600;
+}
+
+section#works .w_webdesign h4 {
+	color: #21759b;
+}
+
+section#works .w_webdesign dl {
+	border-color: #21759b;
+}
+
+section#works .w_webdesign dl div span {
+	background-color: #21759b;
+}
+
+section#works .w_webdesign dl:hover {
+	background-color: #21759b;
+}
+
+section#works .w_webdesign dl:hover div span {
+	background-color: white;
+	color: #21759b;
+}
+
+section#works .w_ios h4 {
+	color: #333;
+}
+
+section#works .w_ios dl {
+	border-color: #333;
+}
+
+section#works .w_ios dl div span {
+	background-color: #333;
+}
+
+section#works .w_ios dl:hover {
+	background-color: #333;
+}
+
+section#works .w_ios dl:hover div span {
+	background-color: white;
+	color: #333;
+}
 
 /* footer (contact) ---------------------------------------------------------------- */
 
