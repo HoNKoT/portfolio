@@ -46,6 +46,8 @@ body {
 	font-size: 100%;
 }
 
+/* header ---------------------------------------------------------------- */
+
 .navbar-inverse {
 	border-radius: 0px;
 }
@@ -67,6 +69,8 @@ h1 {
 nav li {
 	font-size: 1.5em;
 }
+
+/* top image ---------------------------------------------------------------- */
 
 section#topimage {
 	background-image: url("images/pc_edited.jpg");
@@ -93,7 +97,6 @@ section#topimage section {
 	padding: 8% 15px;
 
 	color: white;
-	font-size: 1.25em;
 	font-weight: 100;
 	letter-spacing : 0.1em;
 	text-align: center;
@@ -113,22 +116,25 @@ section#topimage section p, section#topimage section h2 {
 }
 
 section#topimage section p span {
+	font-size: 1.15em;
 	font-weight: 500;
 }
 
 section#topimage section h2 {
 	padding: 0.5em 0px;
 	margin: 0.5em 0px;
-	font-size: 1.25em;
+	font-size: 1.5em;
 	letter-spacing : 0.125em;
 	font-weight: 300;
 }
+
+/* main contents ---------------------------------------------------------------- */
 
 body>section {
 	margin-bottom: 120px;
 }
 
-#about, #skills, #works {
+#about, #s_android, #s_ios, #s_webdesign, #works {
 	padding-right: 30px;
 	padding-left: 30px;
 }
@@ -143,9 +149,10 @@ body>section p {
 	line-height: 1.75em;
 }
 
+/* main > about ---------------------------------------------------------------- */
+
 section#about {
 	text-align: center;
-	margin
 }
 
 .icons img {
@@ -153,3 +160,19 @@ section#about {
 	height: 40px;
 	margin: 30px 5px 0px 5px;
 }
+
+/* main > skills ---------------------------------------------------------------- */
+
+section#skills {
+	text-align: center;
+}
+
+#s_android, #s_ios, #s_webdesign {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* main > works ---------------------------------------------------------------- */
+
+/* footer (contact) ---------------------------------------------------------------- */
+
