@@ -85,6 +85,7 @@ $(function() {
 				if (!mSync) {
 					// start animation
 					mSync = true;
+					console.log("mSync true");
 					setTimeout("animate(INCREMENT)", 1);
 				}
 			}
@@ -126,13 +127,9 @@ function animate(dir){
 		    	mAnimateFlame[i] += INCRIMENT_VAL;
 		    	if (mAnimateFlame[i] > MAXIMUM_FRAME) {
 		    		mAnimateFlame[i] = MAXIMUM_FRAME;
-		    		mSkillScreen = STATE_FINISH;
+		    		mSkillScreen[i] = STATE_FINISH;
 		    		console.log("INDEX " + i + " : finish animation");
 		    	}
-		    } else if (dir === DECREMENT) {
-		    	mAnimateFlame[i] -= INCRIMENT_VAL;
-		    	if (mAnimateFlame[i] < 0)
-		    		mAnimateFlame[i] = 0;
 		    }
 
 			for (var k = 0; k < mCircles[i].length; k++) {
@@ -149,5 +146,8 @@ function animate(dir){
 			break;
 		}
 	}
-	if (!animate) SYNC_ANIMATION = false;    
+	if (!animate) {
+		console.log("mSync false");
+		mSync = false;
+	}
 }
