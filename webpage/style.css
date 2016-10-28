@@ -78,7 +78,6 @@ section#topimage {
  	background-size: cover;
 
 	width: 100%;
-	height: 20%;
 	/*height: 95%; jsで窓枠ーheaderの高さで変動させる*/ 
 
 	position: relative;
