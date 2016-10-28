@@ -1,0 +1,161 @@
+/*
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Passion One', cursive;
+*/
+/* colors
+android   : a4c600
+webdesign : 21759b
+*/
+
+.fontandroid {
+	color: #a4c600;
+}
+
+.fontwebdesign {
+	color: #21759b;
+}
+
+.fontios {
+	color: white;
+}
+
+.bgandroid {
+	background-color: #a4c600;
+	color: white;
+}
+
+.bgwebdesign {
+	background-color: #21759b;
+	color: white;
+}
+
+.bgios {
+	background-color: #333;
+	color: white;
+}
+
+body {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	font-size: 100%;
+}
+
+.navbar-inverse {
+	border-radius: 0px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700; 
+	letter-spacing : 0.15em;
+
+	margin:15px;
+	color: white;
+	font-size: 1.75em;
+}
+
+nav li {
+	font-size: 1.5em;
+}
+
+section#topimage {
+	background-image: url("images/pc_edited.jpg");
+ 	/* 画像を常に天地左右の中央に配置 */
+ 	background-position: center center;
+  	/* 画像をタイル状に繰り返し表示しない */
+  	background-repeat: no-repeat;
+ 	/* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+ 	background-size: cover;
+
+	width: 100%;
+	height: 500px;
+
+	position: relative;
+}
+
+section#topimage section {
+	position: absolute;
+	top: 25%;
+
+	width: 30%;
+	height: 250px;
+	background-color: rgba(0, 0, 0, 0.7);
+	margin: auto 15px;
+	padding: 15px;
+
+	color: white;
+	font-size: 1.25em;
+	font-weight: 100;
+	letter-spacing : 0.1em;
+	text-align: center;
+}
+
+section#topimage section:first-child {
+	left: 15px;
+}
+
+section#topimage section:last-child {
+	right: 15px;
+}
+
+section#topimage section p:first-child {
+	margin-top: 50px;
+}
+
+section#topimage section p {
+	margin: 0px;
+}
+
+section#topimage section p span {
+	font-size: 1.25em;
+	font-weight: 300;
+}
+
+section#topimage section:first-child h2 {
+	background-color: #a4c600;
+}
+
+section#topimage section h2 {
+	padding: 0.5em 0px;
+	margin: 0.5em 0px;
+	font-size: 1.25em;
+	letter-spacing : 0.125em;
+	font-weight: 300;
+	background-color: #21759b;
+}
+
+body>section {
+	margin-bottom: 120px;
+}
+
+#about, #skills, #works {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+body>section h3 {
+	font-size: 2.5em;
+	margin-bottom: 30px;
+}
+
+body>section p {
+	font-size: 1.75em;
+	line-height: 1.75em;
+}
+
+section#about {
+	text-align: center;
+	margin
+}
+
+.icons img {
+	width: 40px;
+	height: 40px;
+	margin: 30px 5px 0px 5px;
+}

@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hiroki Honda</title>
 
-<script src="jquery-3.1.1.min.js" ></script>
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -17,6 +15,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- my own css -->
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i|Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Passion+One:400,700,900" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 </head>
 
@@ -24,28 +23,40 @@
 
 <!-- header ------------------------------------------------>
 <header>
-  <h1>HIROKI HONDA</h1>
-  <nav>
-    <ul>
-      <li>ABOUT</li>
-      <li>SKILLS</li>
-      <li>WORKS</li>
-      <li>CONTACT</li>
-    </ul>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h1>HIROKI HONDA</h1>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">SKILLS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#works">WORKS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+  </div>
   </nav>
 </header>
 
 <!-- topimage ------------------------------------------------>
 <section id="topimage">
-  <section>
+  <section class="center-block">
     <p>I AM AN</p>
     <h2>ANDROID DEVELOPER</h2>
-    <p>FOR 6 YEARS</p>
+    <p>FOR <span class="fontandroid">6 YEARS</span></p>
   </section>
-  <section>
+  <section class="center-block">
     <p>I AM ALSO A</p>
     <h2>WEB DESIGNER</h2>
-    <p>FOR 1 YEAR</p>
+    <p>FOR <span class="fontwebdesign">1 YEAR</span></p>
   </section>
 </section>
 
@@ -59,7 +70,7 @@ Individualy, I’ve released some Android Apps as the Developer, HoNKoT.</p>
 <p>Now, I’m studying Web Design and iOS App developing as a student in Vancouver.<br />
 I’ve created a Dental Clinic Website in Japan by Wordpress.</p>
 
-  <div>
+  <div class="icons">
     <img src="images/github.png">
     <img src="images/twitter.png">
     <img src="images/linkedin.png">
@@ -68,9 +79,9 @@ I’ve created a Dental Clinic Website in Japan by Wordpress.</p>
 </section>
 
 <!-- skills ------------------------------------------------>
-<section id="skills">≈
+<section id="skills">
   <h3>SKILLS</h3>
-  <section id="s_android">
+  <section id="s_android" class="bgandroid">
     <h4>ANDROID</h4>
     <p>I can do <span>Customizing Android OS</span> and <span>Developing Apps</span>.<br />
     I have some experiences as an employee and individual programmer<br />
@@ -81,7 +92,7 @@ I’ve created a Dental Clinic Website in Japan by Wordpress.</p>
     JAVA
     C++
   </section>
-  <section id="s_ios">
+  <section id="s_ios" class="bgios">
     <h4>iOS</h4>
     <p>I can do <span>Developing iPhone/iPad Apps.</span><br />
     Even if I learned as a student and just created some Apps in the class<br />
@@ -90,7 +101,7 @@ I’ve created a Dental Clinic Website in Japan by Wordpress.</p>
     <!-- TODO: cercle percentage css -->
     Swift
   </section>
-  <section id="s_webdesign">
+  <section id="s_webdesign" class="bgwebdesign">
     <h4>WEB DESIGN</h4>
     <p>I can do <span>Establishing Websites</span>.<br />
     I have some experiences creating some websites with WORDPRESS<br />
