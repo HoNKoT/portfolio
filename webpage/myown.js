@@ -1,118 +1,132 @@
+
+
+// define variables
+var INDEX_ANDROID = 0; // define
+var INDEX_IOS = 1; // define
+var INDEX_WENDESIGN = 2; // define
+var INCRIMENT_VAL = 2; // define
+var DECRIMENT_VAL = 2; // define
+var INCREMENT = "increment"; // define
+var DECREMENT = "decrement"; // define
+var STATE_STOP = 0; // define
+var STATE_ANIMATE = 1; // define
+var STATE_FINISH = 2; // define
+var MAXIMUM_FRAME = 360; // define
+
+// define, but they can vary when the window size was changed
+var SCROLL_Y = [
+	0,
+	0,
+	0];
+
+// array variables
+var mCircles = [
+	$("#s_android .container4circle"),
+	$("#s_ios"),
+	$("#s_webdesign")];
+var mAnimateFlame = [
+	0,
+	0,
+	0];
+var mSkillScreen = [
+	STATE_STOP,
+	STATE_STOP,
+	STATE_STOP];
+var mSync = false;
+
 //読み込み時の表示
 window_load();
 
 //ウィンドウサイズ変更時に更新
 window.onresize = window_load;
-var s_androidY, s_iosY, s_webdesignY;
 
-//サイズの表示
+// called when the window size was changed somehow.
 function window_load() {
   	document.getElementById('topimage').style.height
     		= (window.innerHeight - document.getElementById('header').clientHeight) + "px";
     // console.log(window.innerHeight - document.getElementById('header').clientHeight
 
     // update Y position
-	s_androidY = $("#s_android").offset().top;
-	s_iosY = $("#s_ios").offset().top;
-	s_webdesignY = $("#s_webdesign").offset().top;
+    for (var i = 0; i < mCircles.length; i++) {
+    	SCROLL_Y[i] = mCircles[i].offset().top;
+    }
 }
-
-/*See here http://jsfiddle.net/zap4f/1/ */
-var i = 0 , prec;
-var degs = $("#prec").attr("class").split(' ')[1];
-var activeBorder = $("#activeBorder");
-var INCRIMENT_VAL = 2; // define
-var DECRIMENT_VAL = 2; // define
-var INCREMENT = "increment"; // define
-var DECREMENT = "decrement"; // define
-var STATE_STOP = 0;
-var STATE_ANIMATE = 1;
-var STATE_FINISH = 2;
-var SCROLLED_ANDROID = STATE_STOP;
-var SCROLLED_IOS = STATE_STOP;
-var SCROLLED_WEBDESIGN = STATE_STOP;
-var SYNC_ANIMATION = false;
 
 $(function() {
 	// like onScroll
     $(window).scroll(function () {
     	// return when the animations all finished
-    	if (SCROLLED_ANDROID === STATE_FINISH
-        		&& SCROLLED_IOS === STATE_FINISH
-        		&& SCROLLED_WEBDESIGN === STATE_FINISH) {
+    	if (mSkillScreen[INDEX_ANDROID] === STATE_FINISH
+        		&& mSkillScreen[INDEX_IOS] === STATE_FINISH
+        		&& mSkillScreen[INDEX_WENDESIGN] === STATE_FINISH) {
 	    	return;
 	    }
 
-
-    	// scrollBottom > s_xxxxxY
-        if (SCROLLED_ANDROID === STATE_STOP &&
-        		(($(this).scrollTop() + $(this).height())
-        		 > s_androidY)) {
-        	console.log("SCROLLED_ANDROID start animation");
-			SCROLLED_ANDROID = STATE_ANIMATE;
-        }
-        if (SCROLLED_IOS === STATE_STOP &&
-        		(($(this).scrollTop() + $(this).height())
-        		 > s_iosY)) {
-        	console.log("SCROLLED_IOS start animation");
-        	SCROLLED_IOS = STATE_ANIMATE;
-        }
-        if (SCROLLED_WEBDESIGN === STATE_STOP &&
-        		(($(this).scrollTop() + $(this).height())
-        		 > s_webdesignY)) {
-        	console.log("SCROLLED_WEBDESIGN start animation");
-        	SCROLLED_WEBDESIGN = STATE_ANIMATE;
-        }
-
-        if (SCROLLED_ANDROID === STATE_ANIMATE
-        		|| SCROLLED_IOS === STATE_ANIMATE
-        		|| SCROLLED_WEBDESIGN === STATE_ANIMATE) {
-	    	if (!SYNC_ANIMATION) {
-	    		SYNC_ANIMATION = true;
-	    		window.setTimeout("animate(INCREMENT)", 1);
+	    var scrollBottom = $(this).scrollTop() + $(this).height();
+	    for (var i = 0; i < mSkillScreen.length; i++) {
+	    	// check whether the circle already show up or not.
+	    	if (mSkillScreen[i] === STATE_STOP
+	    		&& scrollBottom > SCROLL_Y[i]) {
+	    		// switch state to Animation
+	    		console.log("INDEX " + i + " : start animation");
+	    		mSkillScreen[i] = STATE_ANIMATE;
 	    	}
 	    }
+
+		for (var i = 0; i < mSkillScreen.length; i++) {
+			if (mSkillScreen[i] === STATE_ANIMATE) {
+				if (!mSync) {
+					// start animation
+					mSync = true;
+					setTimeout("animate(INCREMENT)", 1);
+				}
+			}
+		}
     });
 });
-var stopper = 0;
+
 function animate(dir){
 
-	if (SCROLLED_ANDROID === STATE_ANIMATE) {
-		stopper++;
-	    if (dir === INCREMENT) {
-	    	i += INCRIMENT_VAL;
-	    	if (i > degs) i = degs;
-	    } else {
-	    	i -= DECRIMENT_VAL;
-	    	if (i < 0) i = 0;
-	    }
-	    
-	    prec = (100 * i) / 360;   
-	    // $(".prec").html(Math.round(prec)+"%");
-	    
-	    if (i <= 180) {
-	        activeBorder.css(
-	        	'background-image',
-	        	'linear-gradient(' + (90+i) + 'deg, transparent 50%, #6d8701 50%),linear-gradient(90deg, #6d8701 50%, transparent 50%)');
-	    } else{
-	        activeBorder.css('background-image','linear-gradient(' + (i-90) + 'deg, transparent 50%, #ffff00 50%),linear-gradient(90deg, #6d8701 50%, transparent 50%)');
-	    }
+	for (var i = 0; i < 1; i++) {//mSkillScreen.length; i++) {
+		if (mSkillScreen[i] === STATE_ANIMATE) {
+			if (dir === INCREMENT) {
+		    	mAnimateFlame[i] += INCRIMENT_VAL;
+		    	if (mAnimateFlame[i] > MAXIMUM_FRAME) {
+		    		mAnimateFlame[i] = MAXIMUM_FRAME;
+		    		mSkillScreen = STATE_FINISH;
+		    	}
+		    } else if (dir === DECREMENT) {
+		    	mAnimateFlame[i] -= INCRIMENT_VAL;
+		    	if (mAnimateFlame[i] < 0)
+		    		mAnimateFlame[i] = 0;
+		    }
 
-	    console.log(stopper +":"+i);
-
-	    if (i >= degs) {
-			SCROLLED_ANDROID = STATE_FINISH;
-	    }
+			for (var k = 0; k < mCircles[i].length; k++) {
+				var max_val = parseInt(
+					mCircles[i][k].querySelector(".prec").getAttribute("class").split(" ")[1], 10);
+				// var degs = $("#prec").attr("class").split(' ')[1];
+				var set_val = Math.ceil( // kiriage
+					mAnimateFlame[i] * (max_val / 360));
+				var activeBorder = mCircles[i][k].querySelector(".active-border");
+				console.log(k+":"+set_val);
+			    if (set_val <= 180) {
+			        activeBorder.style.backgroundImage
+			        	='linear-gradient(' + (90+set_val) + 'deg, transparent 50%, #6d8701 50%),linear-gradient(90deg, #6d8701 50%, transparent 50%)';
+			    } else{
+			        activeBorder.style.backgroundImage
+			        	='linear-gradient(' + (set_val-90) + 'deg, transparent 50%, #ffff00 50%),linear-gradient(90deg, #6d8701 50%, transparent 50%)';
+			    }
+			}
+		}
 	}
 
-
-	if (SCROLLED_ANDROID === STATE_ANIMATE) {
-    		// || SCROLLED_IOS === STATE_ANIMATE
-    		// || SCROLLED_WEBDESIGN === STATE_ANIMATE) {
-	    window.setTimeout("animate(INCREMENT)", 1);
-	} else {
-		SYNC_ANIMATION = false;
+	var animate = false;
+	for (var i = 0; i < mSkillScreen.length; i++) {
+		if (mSkillScreen[i] === STATE_ANIMATE) {
+			window.setTimeout("animate(INCREMENT)", 1);
+			animate = true;
+			break;
+		}
 	}
-    
-    // setTimeout(loopit(INCREMENT), 1);
+	if (!animate) SYNC_ANIMATION = false;    
 }
