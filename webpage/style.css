@@ -43,10 +43,11 @@ html, body {
 	height: 100%;
 }
 
-body {
+body, p {
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 300;
-	font-size: 100%;
+	font-size: 18px;
+	line-height: 1.75em;
 }
 
 /* header ---------------------------------------------------------------- */
@@ -61,16 +62,17 @@ body {
 
 h1 {
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-weight: 700; 
+	font-size: 20px;
+	font-weight: 300; 
 	letter-spacing : 0.15em;
 
 	margin:15px;
 	color: white;
-	font-size: 1.75em;
 }
 
-nav li {
-	font-size: 1.5em;
+nav li a {
+	font-size: 18px;
+	font-weight: 100;
 }
 
 /* top image ---------------------------------------------------------------- */
@@ -100,7 +102,6 @@ section#topimage section {
 	padding: 8% 15px;
 
 	color: white;
-	font-weight: 100;
 	letter-spacing : 0.1em;
 	text-align: center;
 }
@@ -116,18 +117,19 @@ section#topimage section:last-child {
 section#topimage section p, section#topimage section h2 {
 	/*reset for bootstrap*/
 	margin: 0px;
+
+	font-weight: 100;
 }
 
 section#topimage section p span {
-	font-size: 1.15em;
 	font-weight: 500;
 }
 
 section#topimage section h2 {
 	padding: 0.5em 0px;
-	margin: 0.5em 0px;
-	font-size: 1.5em;
+	margin: 0.5em 0px;\
 	letter-spacing : 0.125em;
+	font-size: 18px;
 	font-weight: 300;
 }
 
@@ -143,13 +145,9 @@ body>section {
 }
 
 body>section h3 {
-	font-size: 2.5em;
+	font-size: 28px;
+	font-weight: 300;
 	margin-bottom: 30px;
-}
-
-body>section p {
-	font-size: 1.75em;
-	line-height: 1.75em;
 }
 
 /* main > about ---------------------------------------------------------------- */
@@ -170,6 +168,21 @@ section#skills {
 	text-align: center;
 }
 
+section#s_android h3, section#s_ios h3, section#s_webdesign h3 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+section#skills p {
+	font-size: 16px;
+	font-weight: 100;
+}
+
+section#skills p span {
+	font-size: 18px;
+	font-weight: 500;
+}
+
 #s_android, #s_ios, #s_webdesign {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -178,13 +191,15 @@ section#skills {
 /*See here http://jsfiddle.net/zap4f/1/ */
 .container4circle{
     width: 110px;
-    height: 110px;/*
+    height: 110px;
+    margin: 30px;
+    display: inline-block;
+    /*
     margin: 100px auto;*/
 }
 .prec{
     top: 30px;
     position: relative;
-    font-size: 30px;
 }
 
 .circle{
@@ -210,10 +225,10 @@ section#skills {
         linear-gradient(91deg, transparent 50%, #A2ECFB 50%),
         linear-gradient(90deg, #A2ECFB 50%, transparent 50%);*/
 
-    background-color:#ffff00;
+    /*background-color:#ffff00;
     background-image:
         linear-gradient(91deg, transparent 50%, #6d8701 50%),
-        linear-gradient(90deg, #6d8701 50%, transparent 50%);
+        linear-gradient(90deg, #6d8701 50%, transparent 50%);*/
     
 }
 

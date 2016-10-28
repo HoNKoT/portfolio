@@ -22,8 +22,8 @@ var SCROLL_Y = [
 // array variables
 var mCircles = [
 	$("#s_android .container4circle"),
-	$("#s_ios"),
-	$("#s_webdesign")];
+	$("#s_ios .container4circle"),
+	$("#s_webdesign .container4circle")];
 var mAnimateFlame = [
 	0,
 	0,
@@ -33,6 +33,7 @@ var mSkillScreen = [
 	STATE_STOP,
 	STATE_STOP];
 var mSync = false;
+var mInitialize = false;
 
 //読み込み時の表示
 window_load();
@@ -49,7 +50,13 @@ function window_load() {
     // update Y position
     for (var i = 0; i < mCircles.length; i++) {
     	SCROLL_Y[i] = mCircles[i].offset().top;
-    }
+
+    	if (!mInitialize) {
+			for (var k = 0; k < mCircles[i].length; k++) {
+				setCircleColor(mCircles[i][k], i);
+			}
+		}
+	}
 }
 
 $(function() {
@@ -85,15 +92,42 @@ $(function() {
     });
 });
 
+function setCircleColor(element, index) {
+	// [0] : prec (do not use)
+	// [1] : value/deg
+	// [2] : valid color
+	// [3] : invalid color
+	var classes = element.querySelector(".prec").getAttribute("class").split(" ");
+
+	var max_val = parseInt(classes[1], 10);
+	var set_val = Math.ceil( // kiriage
+		mAnimateFlame[index] * (max_val / 360));
+	var validColor = "#" + classes[2];
+	var invalidColor = "#" + classes[3];
+
+	var activeBorder = element.querySelector(".active-border");
+	activeBorder.style.backgroundColor = validColor;
+    if (set_val <= 180) {
+        activeBorder.style.backgroundImage
+        	= 'linear-gradient(' + (90 + set_val) + 'deg, transparent 50%, ' + invalidColor + ' 50%),' +
+			'linear-gradient(90deg, ' + invalidColor + ' 50%, transparent 50%)';
+    } else {
+        activeBorder.style.backgroundImage
+        	='linear-gradient(' + (set_val - 90) + 'deg, transparent 50%, ' + validColor + ' 50%),' +
+        	'linear-gradient(90deg, ' + invalidColor + ' 50%, transparent 50%)';
+    }
+}
+
 function animate(dir){
 
-	for (var i = 0; i < 1; i++) {//mSkillScreen.length; i++) {
+	for (var i = 0; i < mSkillScreen.length; i++) {
 		if (mSkillScreen[i] === STATE_ANIMATE) {
 			if (dir === INCREMENT) {
 		    	mAnimateFlame[i] += INCRIMENT_VAL;
 		    	if (mAnimateFlame[i] > MAXIMUM_FRAME) {
 		    		mAnimateFlame[i] = MAXIMUM_FRAME;
 		    		mSkillScreen = STATE_FINISH;
+		    		console.log("INDEX " + i + " : finish animation");
 		    	}
 		    } else if (dir === DECREMENT) {
 		    	mAnimateFlame[i] -= INCRIMENT_VAL;
@@ -102,20 +136,7 @@ function animate(dir){
 		    }
 
 			for (var k = 0; k < mCircles[i].length; k++) {
-				var max_val = parseInt(
-					mCircles[i][k].querySelector(".prec").getAttribute("class").split(" ")[1], 10);
-				// var degs = $("#prec").attr("class").split(' ')[1];
-				var set_val = Math.ceil( // kiriage
-					mAnimateFlame[i] * (max_val / 360));
-				var activeBorder = mCircles[i][k].querySelector(".active-border");
-				console.log(k+":"+set_val);
-			    if (set_val <= 180) {
-			        activeBorder.style.backgroundImage
-			        	='linear-gradient(' + (90+set_val) + 'deg, transparent 50%, #6d8701 50%),linear-gradient(90deg, #6d8701 50%, transparent 50%)';
-			    } else{
-			        activeBorder.style.backgroundImage
-			        	='linear-gradient(' + (set_val-90) + 'deg, transparent 50%, #ffff00 50%),linear-gradient(90deg, #6d8701 50%, transparent 50%)';
-			    }
+				setCircleColor(mCircles[i][k], i);
 			}
 		}
 	}
