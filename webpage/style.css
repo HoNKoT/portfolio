@@ -139,7 +139,7 @@ section#topimage section h2 {
 
 /* main contents ---------------------------------------------------------------- */
 
-body>section {
+body>section, footer form {
 	margin-bottom: 120px;
 }
 
@@ -148,7 +148,7 @@ body>section {
 	padding-left: 30px;
 }
 
-body>section h3 {
+body>section h3, footer h3 {
 	font-size: 28px;
 	font-weight: 300;
 	margin-bottom: 30px;
@@ -377,3 +377,41 @@ section#works .w_ios dl:hover div span {
 
 /* footer (contact) ---------------------------------------------------------------- */
 
+footer {
+	background: #333;
+	text-align: center;
+}
+
+footer h3 {
+	padding-top: 30px;
+	font-weight: 100;
+	color:white;
+}
+
+footer form textarea.form-control {
+	height: 150px;
+}
+
+footer div, footer p, footer a {
+	color: white;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+footer p {
+	margin-bottom: 0px;
+}
+
+footer div, footer a {
+	color: gray;
+}
+
+.form-control {
+	width: 50%;
+	margin: 0px auto 10px auto;
+}
+
+.btn {
+	margin-top:20px;
+	width: 50%;
+}
