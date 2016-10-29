@@ -250,9 +250,8 @@ section#works h4 {
 	margin: 0px;
 }
 
-section#works h4 span {
+section#works dd span {
 	color: gray;
-	margin-left: 15px;
 	font-size: 14px;
 	font-weight: 100;
 	font-style: italic;
@@ -295,7 +294,7 @@ section#works dl div span {
 	margin-right: 15px;
 	text-align: center;
 
-	width: 120px;
+	width: 100px;
 	line-height: 1.25em;
 	font-size: 16px;
 	font-weight: 100;
@@ -308,7 +307,7 @@ section#works dt p {
 	line-height: 1.375em;
 }
 
-section#works dl:hover h4, section#works dl:hover p, section#works dl:hover h4 span  {
+section#works dl:hover h4, section#works dl:hover p, section#works dl:hover dd span  {
 	color: white;
 }
 
