@@ -189,8 +189,8 @@ section#skills p span {
 }
 
 #s_android, #s_ios, #s_webdesign {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 
 /* I saw here -> http://jsfiddle.net/zap4f/1/ */
@@ -262,11 +262,6 @@ section#works dl {
 	border: solid 1px;
 
 	background: transparent;
-	-webkit-transition: background .5s ease-in-out;
-	   -moz-transition: background .5s ease-in-out;
-	    -ms-transition: background .5s ease-in-out;
-	     -o-transition: background .5s ease-in-out;
-	        transition: background .5s ease-in-out;
 }
 
 section#works dl, section#works dl h4, section#works dl p, section#works dl span {
