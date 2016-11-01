@@ -54,6 +54,7 @@ body, p {
 	line-height: 1.75em;
 }
 
+
 /* header ---------------------------------------------------------------- */
 
 .navbar-inverse {
@@ -172,6 +173,11 @@ section#skills {
 	text-align: center;
 }
 
+section#skills>h3 {
+	margin: 0px;
+	padding-top: 60px;
+}
+
 section#s_android h3, section#s_ios h3, section#s_webdesign h3 {
 	font-size: 24px;
 	font-weight: 300;
@@ -195,25 +201,18 @@ section#skills p span {
 
 /* I saw here -> http://jsfiddle.net/zap4f/1/ */
 .container4circle {
-    width: 110px;
-    height: 110px;
-    margin: 30px;
+    margin: 60px 30px 0px 30px;
     display: inline-block;
 }
 
 .prec {
-    top: 35px;
     position: relative;
     font-weight: 100;
 }
 
 .circle {
     position: relative;
-    top: 5px;
-    left: 5px;
     text-align: center;
-    width: 100px;
-    height: 100px;
     border-radius: 100%;
     /* WORKS WITH OTHER CLASSES LIKE "bgandroid"
     background-color: #E6F4F7;*/
@@ -222,8 +221,6 @@ section#skills p span {
 .active-border {
     position: relative;
     text-align: center;
-    width: 110px;
-    height: 110px;
     border-radius: 100%;
 
     /*

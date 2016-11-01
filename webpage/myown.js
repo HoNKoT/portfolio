@@ -1,3 +1,36 @@
+$(document).ready(function(){
+	$("img.fadeicon_off").hover(
+		function() {
+			$(this).stop().animate({"opacity": "0"}, "slow");
+			},
+		function() {
+			$(this).stop().animate({"opacity": "1"}, "slow");
+			});
+
+});
+
+function smartRollover() {  
+    if(document.getElementsByTagName) {  
+        var images = document.querySelectorAll(".fadeicon");  
+        for(var i=0; i < images.length; i++) {  
+            if(images[i].getAttribute("src").match("_off."))  
+            {  
+                images[i].onmouseover = function() {  
+                    this.setAttribute("src", this.getAttribute("src").replace("_off.", "_on."));  
+                }  
+                images[i].onmouseout = function() {  
+                    this.setAttribute("src", this.getAttribute("src").replace("_on.", "_off."));  
+                }
+            }  
+        }  
+    }  
+}  
+if(window.addEventListener) {  
+    window.addEventListener("load", smartRollover, false);  
+}  
+else if(window.attachEvent) {  
+    window.attachEvent("onload", smartRollover);  
+};
 
 
 // define variables
@@ -54,6 +87,7 @@ function window_load() {
     	if (!mInitialize) {
 			for (var k = 0; k < mCircles[i].length; k++) {
 				setCircleColor(mCircles[i][k], i);
+				setCircleSize(mCircles[i][k]);
 			}
 		}
 	}
@@ -93,6 +127,44 @@ $(function() {
     });
 });
 
+function setCircleSize(container4circle) {
+	var circleBold = 5;
+
+	var prec = container4circle.querySelector(".prec");
+	var circle = container4circle.querySelector(".circle");
+	var activeBorder = container4circle.querySelector(".active-border");
+
+	var scale = 0.2;
+	if (window.innerWidth < 640) scale = 0.3;
+	var circleWidth = Math.ceil(window.innerWidth * scale);
+	if (circleWidth % 2 > 0) circleWidth -= 1; // parse even
+	console.log("circleWidth :" + circleWidth);
+
+	container4circle.style.width = circleWidth + "px";
+	container4circle.style.height = circleWidth + "px";
+	activeBorder.style.width = circleWidth + "px";
+	activeBorder.style.height = circleWidth + "px";
+	prec.style.lineHeight = (circleWidth - circleBold * 2) + "px";
+	prec.style.width = (circleWidth - circleBold * 2) + "px";
+	prec.style.height = (circleWidth - circleBold * 2) + "px";
+	circle.style.top = circleBold + "px";
+	circle.style.left = circleBold + "px";
+	circle.style.width = (circleWidth - circleBold * 2) + "px";
+	circle.style.height = (circleWidth - circleBold * 2) + "px";
+
+
+	// activeBorder.style.backgroundColor = validColor;
+ //    if (set_val <= 180) {
+ //        activeBorder.style.backgroundImage
+ //        	= 'linear-gradient(' + (90 + set_val) + 'deg, transparent 50%, ' + invalidColor + ' 50%),' +
+	// 		'linear-gradient(90deg, ' + invalidColor + ' 50%, transparent 50%)';
+ //    } else {
+ //        activeBorder.style.backgroundImage
+ //        	='linear-gradient(' + (set_val - 90) + 'deg, transparent 50%, ' + validColor + ' 50%),' +
+ //        	'linear-gradient(90deg, ' + invalidColor + ' 50%, transparent 50%)';
+ //    }
+}
+
 function setCircleColor(element, index) {
 	// [0] : prec (do not use)
 	// [1] : value/deg
@@ -102,7 +174,7 @@ function setCircleColor(element, index) {
 
 	var max_val = parseInt(classes[1], 10);
 	var set_val = Math.ceil( // kiriage
-		mAnimateFlame[index] * (max_val / 360));
+			mAnimateFlame[index] * (max_val / 360));
 	var validColor = "#" + classes[2];
 	var invalidColor = "#" + classes[3];
 
@@ -151,3 +223,4 @@ function animate(dir){
 		mSync = false;
 	}
 }
+
