@@ -430,10 +430,12 @@ section#works .d_android dl.border {
 }
 
 section#works .col-md-12 dl.border div.tools {
+	height: auto;
 	margin-bottom: 20px;
 }
 
 section#works .col-md-12 dl.border div.tools>div {
+	margin:0px;
 	display: inline-block;
 }
 
