@@ -1,0 +1,474 @@
+/*
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Passion One', cursive;
+*/
+/* colors
+android   : a4c600
+ios       : 333333
+webdesign : 21759b
+
+                         light /  dark
+android circle border : ffff00 / 6d8701;
+ios     circle border : fbb03b / 1a1a1a;
+web     circle border : 7ac943 / 1b1464;
+*/
+
+/* for pc ---------------------------------------------------------------- */
+@media screen and (min-width: 991px) {
+	section#work article {
+		height: 500px;
+	}
+}
+
+.fontandroid {
+	color: #a4c600;
+}
+
+.fontwebdesign {
+	color: #21759b;
+}
+
+.fontios {
+	color: white;
+}
+
+.bgandroid {
+	background-color: #a4c600;
+	color: white;
+}
+
+.bgwebdesign {
+	background-color: #21759b;
+	color: white;
+}
+
+.bgios {
+	background-color: #333;
+	color: white;
+}
+
+html, body {
+	height: 100%;
+}
+
+body, p {
+	color: #333;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.75em;
+}
+
+
+/* header ---------------------------------------------------------------- */
+
+.navbar-inverse {
+	border-radius: 0px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+	font-weight: 300; 
+	letter-spacing : 0.15em;
+
+	margin:15px;
+	color: white;
+}
+
+nav li a {
+	font-size: 18px;
+	font-weight: 100;
+}
+
+/* top image ---------------------------------------------------------------- */
+
+section#topimage {
+	background-image: url("images/pc_edited.jpg");
+ 	/* 画像を常に天地左右の中央に配置 */
+ 	background-position: center center;
+  	/* 画像をタイル状に繰り返し表示しない */
+  	background-repeat: no-repeat;
+ 	/* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+ 	background-size: cover;
+
+	width: 100%;
+	/*height: 95%; jsで窓枠ーheaderの高さで変動させる*/ 
+
+	position: relative;
+}
+
+section#topimage section {
+	position: absolute;
+	top: 23%;
+
+	width: 30%;
+	background-color: rgba(0, 0, 0, 0.8);
+	margin: auto 15px;
+	padding: 8% 15px;
+
+	color: white;
+	letter-spacing : 0.1em;
+	text-align: center;
+}
+
+section#topimage section:first-child {
+	left: 15px;
+}
+
+section#topimage section:last-child {
+	right: 15px;
+}
+
+section#topimage section p, section#topimage section h2 {
+	/*reset for bootstrap*/
+	margin: 0px;
+	color: white;
+	font-weight: 100;
+}
+
+section#topimage section p span {
+	font-weight: 500;
+}
+
+section#topimage section h2 {
+	padding: 0.5em 0px;
+	margin: 0.5em 0px;\
+	letter-spacing : 0.125em;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+/* main contents ---------------------------------------------------------------- */
+
+body>section, footer form {
+	margin-bottom: 120px;
+}
+
+#about, #s_android, #s_ios, #s_webdesign, #works {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+body>section h3, footer h3 {
+	font-size: 28px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+/* main > about ---------------------------------------------------------------- */
+
+section#about {
+	text-align: center;
+}
+
+.icons img {
+	width: 40px;
+	height: 40px;
+	margin: 30px 5px 0px 5px;
+}
+
+/* main > skills ---------------------------------------------------------------- */
+
+section#skills {
+	text-align: center;
+}
+/*
+section#skills>h3 {
+	margin: 0px;
+	padding-top: 60px;
+}*/
+
+section#s_android h3, section#s_ios h3, section#s_webdesign h3 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+section#skills p {
+	color: white;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+section#skills p span {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+#s_android, #s_ios, #s_webdesign {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+/* I saw here -> http://jsfiddle.net/zap4f/1/ */
+.container4circle {
+    margin: 60px 30px 0px 30px;
+    display: inline-block;
+}
+
+.prec {
+    position: relative;
+    font-weight: 100;
+}
+
+.circle {
+    position: relative;
+    text-align: center;
+    border-radius: 100%;
+    /* WORKS WITH OTHER CLASSES LIKE "bgandroid"
+    background-color: #E6F4F7;*/
+}
+
+.active-border {
+    position: relative;
+    text-align: center;
+    border-radius: 100%;
+
+    /*
+	WORKS IN JAVASCRIPT
+    background-color:#ffff00;
+    background-image:
+        linear-gradient(91deg, transparent 50%, #6d8701 50%),
+        linear-gradient(90deg, #6d8701 50%, transparent 50%);*/
+    
+}
+
+/* main > works ---------------------------------------------------------------- */
+
+section#works h3 {
+	text-align: center;
+}
+
+section#works a {
+	text-decoration: none;
+	display: block;
+	height: 100%;
+}
+
+section#works h4 {
+	font-size: 20px;
+	margin: 0px;
+}
+
+section#works dd span {
+	color: gray;
+	font-size: 14px;
+	font-weight: 100;
+	font-style: italic;
+}
+
+section#works dl {
+	padding: 20px;
+	border: solid 1px;
+	height: 100%;
+
+	background: transparent;
+}
+
+section#works dl, section#works dl h4, section#works dl p, section#works dl span {
+	-webkit-transition: color .5s ease-in-out;
+	   -moz-transition: color .5s ease-in-out;
+	    -ms-transition: color .5s ease-in-out;
+	     -o-transition: color .5s ease-in-out;
+	        transition: color .5s ease-in-out;
+
+	-webkit-transition: background .4s ease-in-out;
+	   -moz-transition: background .4s ease-in-out;
+	    -ms-transition: background .4s ease-in-out;
+	     -o-transition: background .4s ease-in-out;
+	        transition: background .4s ease-in-out;
+}  
+
+section#works dl div {
+	height: 30px;
+	margin: 5px 0px;
+}
+
+section#works dl div span {
+	display: inline-block;
+	padding-top: 2px;
+	margin-right: 15px;
+	text-align: center;
+
+	width: 100px;
+	line-height: 1.25em;
+	font-size: 16px;
+	font-weight: 100;
+	color: white;
+}
+
+section#works dt p {
+	margin:0px;
+	padding-top: 2px;
+	line-height: 1.375em;
+}
+
+section#works dl:hover h4, section#works dl:hover p, section#works dl:hover dd span  {
+	color: white;
+}
+
+section#works article {
+	margin-bottom: 20px;
+}
+
+section#works .w_android h4 {
+	color: #a4c600;
+}
+
+section#works .w_android dl {
+	border-color: #a4c600;
+}
+
+section#works .w_android dl div span {
+	background-color: #a4c600;
+}
+
+section#works .w_android dl:hover {
+	background-color: #a4c600;
+}
+
+section#works .w_android dl:hover div span {
+	background-color: white;
+	color: #a4c600;
+}
+
+section#works .w_webdesign h4 {
+	color: #21759b;
+}
+
+section#works .w_webdesign dl {
+	border-color: #21759b;
+}
+
+section#works .w_webdesign dl div span {
+	background-color: #21759b;
+}
+
+section#works .w_webdesign dl:hover {
+	background-color: #21759b;
+}
+
+section#works .w_webdesign dl:hover div span {
+	background-color: white;
+	color: #21759b;
+}
+
+section#works .w_ios h4 {
+	color: #333;
+}
+
+section#works .w_ios dl {
+	border-color: #333;
+}
+
+section#works .w_ios dl div span {
+	background-color: #333;
+}
+
+section#works .w_ios dl:hover {
+	background-color: #333;
+}
+
+section#works .w_ios dl:hover div span {
+	background-color: white;
+	color: #333;
+}
+
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* footer (contact) ---------------------------------------------------------------- */
+
+footer {
+	background: #333;
+	text-align: center;
+}
+
+footer h3 {
+	padding-top: 30px;
+	font-weight: 100;
+	color:white;
+}
+
+footer form textarea.form-control {
+	height: 150px;
+}
+
+footer div, footer p, footer a {
+	color: white;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+footer p {
+	margin-bottom: 0px;
+}
+
+footer div, footer a {
+	color: gray;
+}
+
+.form-control {
+	width: 50%;
+	margin: 0px auto 10px auto;
+}
+
+.btn {
+	margin-top:20px;
+	width: 50%;
+}
+
+/* for smartphone ---------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+	body, p {
+		font-size: 16px;
+		line-height: 1.75em;
+	}
+
+	section#topimage {
+		background-image: url("images/sp_edited.jpg");
+	}
+
+	section#topimage section {
+		top: 31%;
+	}
+
+	.icons img {
+		width: 60px;
+		height: 60px;
+		margin: 60px 10px 0px 10px;
+	}
+
+	body>section h3, footer h3 {
+		font-size: 24px;
+	}
+
+	section#works a, .row-eq-height {
+		display: static;
+	}
+
+	section#works a, section#works dl {
+		height: auto;
+	}
+
+	.form-control, .btn {
+		width: 80%;
+	}
+
+	.btn {
+		height: 60px;
+	}
+
+	footer #iconad {
+		padding-top:20px;
+	}
+}
