@@ -263,8 +263,9 @@ section#works dd span {
 	font-style: italic;
 }
 
-section#works dl {
+section#works dl.border {
 	padding: 20px;
+	padding-bottom: 0px;
 	border: solid 1px;
 	height: 100%;
 
@@ -309,7 +310,12 @@ section#works dt p {
 	line-height: 1.375em;
 }
 
-section#works dl:hover h4, section#works dl:hover p, section#works dl:hover dd span  {
+section#works .col-md-4 dl:hover h4,
+ section#works .col-md-4 dl:hover p,
+  section#works .col-md-4 dl:hover dd span,
+   section#works .col-md-12 h4,
+    section#works .col-md-12 dl p,
+     section#works .col-md-12 dd span {
 	color: white;
 }
 
@@ -317,11 +323,15 @@ section#works article {
 	margin-bottom: 20px;
 }
 
+section#works article dt img {
+	width: 100%;
+}
+
 section#works .w_android h4 {
 	color: #a4c600;
 }
 
-section#works .w_android dl {
+section#works .w_android dl, section#works .d_android dl {
 	border-color: #a4c600;
 }
 
@@ -333,7 +343,7 @@ section#works .w_android dl:hover {
 	background-color: #a4c600;
 }
 
-section#works .w_android dl:hover div span {
+section#works .w_android dl:hover div span, section#works .d_android div span {
 	background-color: white;
 	color: #a4c600;
 }
@@ -342,7 +352,7 @@ section#works .w_webdesign h4 {
 	color: #21759b;
 }
 
-section#works .w_webdesign dl {
+section#works .w_webdesign dl, section#works .d_webdesign dl.border {
 	border-color: #21759b;
 }
 
@@ -354,7 +364,7 @@ section#works .w_webdesign dl:hover {
 	background-color: #21759b;
 }
 
-section#works .w_webdesign dl:hover div span {
+section#works .w_webdesign dl:hover div span, section#works .d_webdesign div span {
 	background-color: white;
 	color: #21759b;
 }
@@ -363,7 +373,7 @@ section#works .w_ios h4 {
 	color: #333;
 }
 
-section#works .w_ios dl {
+section#works .w_ios dl, section#works .d_ios dl.border {
 	border-color: #333;
 }
 
@@ -375,16 +385,66 @@ section#works .w_ios dl:hover {
 	background-color: #333;
 }
 
-section#works .w_ios dl:hover div span {
+section#works .w_ios dl:hover div span, section#works .d_ios div span {
 	background-color: white;
 	color: #333;
 }
 
+/* adjust each work boxes' height */
 .row-eq-height {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
 }
+
+/* balloon top */
+.balloon-top:after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 20%;
+	margin-left: -10px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+	/*border-color: transparent transparent #a4c600 transparent;*/
+}
+
+.d_android:after {
+	border-color: transparent transparent #a4c600 transparent;
+}
+
+.d_ios:after {
+	border-color: transparent transparent #333 transparent;
+}
+
+.d_webdesign:after {
+	border-color: transparent transparent #21759b transparent;
+}
+
+section#works .d_android dl.border {
+	background-color: #a4c600;
+	color: white;
+}
+
+section#works .col-md-12 dl.border div.tools {
+	margin-bottom: 20px;
+}
+
+section#works .col-md-12 dl.border div.tools>div {
+	display: inline-block;
+}
+
+section#works .col-md-12 dl.border>dt>dl:last-child {
+	margin-bottom: 0px;
+}
+
+section#works .col-md-12 dl.border>dt>dl dt {
+	margin-left: 20px;
+}
+
 
 /* footer (contact) ---------------------------------------------------------------- */
 
@@ -428,7 +488,7 @@ footer div, footer a {
 }
 
 /* for smartphone ---------------------------------------------------------------- */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 991px) {
 	body, p {
 		font-size: 16px;
 		line-height: 1.75em;
@@ -451,6 +511,29 @@ footer div, footer a {
 	body>section h3, footer h3 {
 		font-size: 24px;
 	}
+
+	section#works dl.border {
+		padding-bottom: 20px;
+	}
+
+/*	section#works .w_android dl.border {
+		position: relative;
+		width: 100%;
+	}
+
+	section#works .w_android dl.border dd {
+		margin-left: 100px;
+	}
+
+	section#works .w_android dl.border div:first-child {
+		margin-left: 100px;
+	}
+
+	section#works .w_android dl.border dt {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}*/
 
 	section#works a, .row-eq-height {
 		display: static;
