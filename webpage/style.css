@@ -172,11 +172,11 @@ section#about {
 section#skills {
 	text-align: center;
 }
-
+/*
 section#skills>h3 {
 	margin: 0px;
 	padding-top: 60px;
-}
+}*/
 
 section#s_android h3, section#s_ios h3, section#s_webdesign h3 {
 	font-size: 24px;
@@ -405,4 +405,42 @@ footer div, footer a {
 .btn {
 	margin-top:20px;
 	width: 50%;
+}
+
+/* for smartphone ---------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+	body, p {
+		font-size: 16px;
+		line-height: 1.75em;
+	}
+
+	section#topimage {
+		background-image: url("images/sp_edited.jpg");
+	}
+
+	section#topimage section {
+		top: 31%;
+	}
+
+	.icons img {
+		width: 60px;
+		height: 60px;
+		margin: 60px 10px 0px 10px;
+	}
+
+	body>section h3, footer h3 {
+		font-size: 24px;
+	}
+
+	.form-control, .btn {
+		width: 80%;
+	}
+
+	.btn {
+		height: 60px;
+	}
+
+	footer #iconad {
+		padding-top:20px;
+	}
 }
