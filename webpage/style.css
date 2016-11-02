@@ -392,9 +392,14 @@ section#works .w_ios dl:hover div span, section#works .d_ios div span {
 
 /* adjust each work boxes' height */
 .row-eq-height {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+.container {
+	width: 100%;
+	padding: 0px;
 }
 
 /* balloon top */
@@ -490,7 +495,7 @@ footer div, footer a {
 }
 
 /* for smartphone ---------------------------------------------------------------- */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
 	body, p {
 		font-size: 16px;
 		line-height: 1.75em;
