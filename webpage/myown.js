@@ -1,13 +1,4 @@
-$(document).ready(function(){
-	$("img.fadeicon_off").hover(
-		function() {
-			$(this).stop().animate({"opacity": "0"}, "slow");
-			},
-		function() {
-			$(this).stop().animate({"opacity": "1"}, "slow");
-			});
-
-});
+// for rollover event -------------------------------------------------------
 
 function smartRollover() {  
     if(document.getElementsByTagName) {  
@@ -32,6 +23,7 @@ else if(window.attachEvent) {
     window.attachEvent("onload", smartRollover);  
 };
 
+// for scroll or circle event -------------------------------------------------------
 
 // define variables
 var INDEX_ANDROID = 0; // define

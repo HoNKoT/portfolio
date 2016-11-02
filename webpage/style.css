@@ -15,6 +15,13 @@ ios     circle border : fbb03b / 1a1a1a;
 web     circle border : 7ac943 / 1b1464;
 */
 
+/* for pc ---------------------------------------------------------------- */
+@media screen and (min-width: 991px) {
+	section#work article {
+		height: 500px;
+	}
+}
+
 .fontandroid {
 	color: #a4c600;
 }
@@ -240,6 +247,8 @@ section#works h3 {
 
 section#works a {
 	text-decoration: none;
+	display: block;
+	height: 100%;
 }
 
 section#works h4 {
@@ -257,6 +266,7 @@ section#works dd span {
 section#works dl {
 	padding: 20px;
 	border: solid 1px;
+	height: 100%;
 
 	background: transparent;
 }
@@ -301,6 +311,10 @@ section#works dt p {
 
 section#works dl:hover h4, section#works dl:hover p, section#works dl:hover dd span  {
 	color: white;
+}
+
+section#works article {
+	margin-bottom: 20px;
 }
 
 section#works .w_android h4 {
@@ -364,6 +378,12 @@ section#works .w_ios dl:hover {
 section#works .w_ios dl:hover div span {
 	background-color: white;
 	color: #333;
+}
+
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 /* footer (contact) ---------------------------------------------------------------- */
@@ -430,6 +450,14 @@ footer div, footer a {
 
 	body>section h3, footer h3 {
 		font-size: 24px;
+	}
+
+	section#works a, .row-eq-height {
+		display: static;
+	}
+
+	section#works a, section#works dl {
+		height: auto;
 	}
 
 	.form-control, .btn {
