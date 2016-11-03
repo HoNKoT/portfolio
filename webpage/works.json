@@ -53,7 +53,57 @@
 		"detail"   : "This app can change Ring Mode automatically along the time schedule the user set in advance. Actually, the app has downloaded 30,000 times in total from the year I released in 2011. I still keep on maintaining it. Released this app was turning point to start developing Android App in my life.",
 		"link"     : [
 				{"href" : "#",
-				"name"  : "Kawakami Dental Clinic - Fukai branch"}
+				"name"  : "Google Play"}
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "images/afri-inc_screenshot.jpg",
+		"title"    : "Schedule AWS EC2 App",
+		"term"     : "Aug,2015 ~ continue",
+		"tag"      : ["Android", "INDIVIDUAL"],
+		"tool"     : ["Android", "Java", "Bitbucket", "Redmine"],
+		"position" : "Project Manager, Programmer",
+		"detail"   : "As producting a new smart phone which has a keyboard and NO TOUCH PANEL. My work was mainly editing layout files because the device has low resolution and many functions for the special device. Then, I also did managing the project.",
+		"link"     : [
+				{"href" : "#",
+				"name"  : "Google Play"}
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "",
+		"title"    : "Customize AndroidOS for avoiding touch event",
+		"term"     : "Apr,2014 ~ May 2015",
+		"tag"      : ["Android", "COMPANY"],
+		"tool"     : ["Android", "Java", "C++", "Subversion", "Redmine"],
+		"position" : "Programmer",
+		"detail"   : "As producting a new smart phone which has a keyboard and NO TOUCH PANEL. Our work was checking Source Code in AndroidOS and customizing it if we need. Mainly, I am with Control App Task Service, ActivityManager.",
+		"link"     : [
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "",
+		"title"    : "Customize Portal App for avoiding touch event",
+		"term"     : "Oct,2014 ~ May 2015",
+		"tag"      : ["Android", "COMPANY"],
+		"tool"     : ["Android", "Java", "Subversion", "Redmine"],
+		"position" : "Project Manager, Programmer",
+		"detail"   : "As producting a new smart phone which has a keyboard and NO TOUCH PANEL. My work was mainly editing layout files because the device has low resolution and many functions for the special device. Then, I also did managing the project.",
+		"link"     : [
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "images/afri-inc_screenshot.jpg",
+		"title"    : "Quick Lock",
+		"term"     : "Jun,2015 ~ continue",
+		"tag"      : ["Android", "COMPANY"],
+		"tool"     : ["Android", "Java", "Bitbucket", "Redmine"],
+		"position" : "Project Manager, Programmer",
+		"detail"   : "For the customers who use their smart phone with a phone case. Many people use it like little size of book. Then, this app automaticaly work the phone display turning on when the phone case is opened. On the other hand, it makes the display turnign Off when it's closed.",
+		"link"     : [
 			]
 	}
 ]
