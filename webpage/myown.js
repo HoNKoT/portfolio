@@ -84,8 +84,11 @@ function window_load() {
 		}
 	}
 
-	// call reading json function
+	// call loading json function
 	readJson();
+
+	// call adjust work detail element
+	adjustWorkDetailPanel();
 }
 
 $(function() {
@@ -359,11 +362,38 @@ function clickWork(element, index) {
 		currentShowDetailIndex = -1;
 	}
 }
-// $(function(){
-// 	$(".openBtn").click(function(event) {
-// 		console.log(event);
-// 		$($(this).parent().nextAll(".detail:first")).animate( 
-// 			{height: "toggle", opacity: "toggle"},
-// 			"nomal");
-// 	});
-// });
+
+// for works click event -------------------------------------------------------
+
+var MODE_PC = 0; // define
+var MODE_TAB = 1; // define
+var MODE_SP = 2; // define
+var lastWindowMode = -1;
+
+function adjustWorkDetailPanel() {
+	var currentWindowWidth = window.innerWidth;
+	var currentWindowMode;
+
+	if (currentWindowWidth > 991) {
+		currentWindowMode = MODE_PC;
+	} else if (currentWindowWidth > 767) {
+		currentWindowMode = MODE_TAB;
+	} else {
+		currentWindowMode = MODE_SP;
+	}
+
+	console.log("currentWM " + currentWindowMode + ", lastWM " + lastWindowMode + ", currentShowDetailIndex " + currentShowDetailIndex);
+
+	if (currentShowDetailIndex != -1) {
+		if (lastWindowMode != currentWindowMode) {
+			console.log
+			$(".detail").eq(currentShowDetailIndex).animate( 
+				{height: "hide", opacity: "hide"},
+				"nomal");
+				currentShowIndex = -1;
+				currentShowDetailIndex = -1;
+		}
+	}
+
+	lastWindowMode = currentWindowMode;
+}
