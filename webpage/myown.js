@@ -248,11 +248,12 @@ function readJson() {
 				html += "<span>" + readData[i].tag[t] + "</span>";
 			}
 			html +=
-			      "</div>"
+			      "</div></div>"
 			    + "<dt><img src='" + readData[i].thumb + "'></dt>"
 			  + "</dl>"
 			+ "</article>";
 
+			console.log(html);
 			$(".row-eq-height").append(html);
 		}
 		// console.log(data);
