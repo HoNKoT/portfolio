@@ -53,7 +53,23 @@
 		"detail"   : "This app can change Ring Mode automatically along the time schedule the user set in advance. Actually, the app has downloaded 30,000 times in total from the year I released in 2011. I still keep on maintaining it. Released this app was turning point to start developing Android App in my life.",
 		"link"     : [
 				{"href" : "#",
+				"name"  : "Google Play"},
+				{"href" : "#",
 				"name"  : "Google Play"}
+			]
+	}
+	,{
+		"type"     : "ios",
+		"thumb"    : "images/automanner.jpg",
+		"title"    : "Auto Manner for iPhone",
+		"term"     : "Oct,2018",
+		"tag"      : ["iPhone", "INDIVIDUAL"],
+		"tool"     : ["iPhone", "Swift", "Bitbucket"],
+		"position" : "Project Manager, Programmer",
+		"detail"   : "I might be done.",
+		"link"     : [
+				{"href" : "#",
+				"name"  : "Apple store"}
 			]
 	}
 	,{
@@ -86,7 +102,7 @@
 		"type"     : "android",
 		"thumb"    : "images/noimage.jpg",
 		"title"    : "Customize Portal App for avoiding touch event",
-		"term"     : "Oct,2014 ~ May 2015",
+		"term"     : "Oct,2014 ~ Mar 2015",
 		"tag"      : ["Android", "COMPANY"],
 		"tool"     : ["Android", "Java", "Subversion", "Redmine"],
 		"position" : "Project Manager, Programmer",
@@ -99,13 +115,49 @@
 		"thumb"    : "images/quicksleep.jpg",
 		"title"    : "Quick Lock",
 		"term"     : "Jun,2015 ~ continue",
-		"tag"      : ["Android", "COMPANY"],
+		"tag"      : ["Android", "INDIVIDUAL"],
 		"tool"     : ["Android", "Java", "Bitbucket", "Redmine"],
 		"position" : "Project Manager, Programmer",
 		"detail"   : "For the customers who use their smart phone with a phone case. Many people use it like little size of book. Then, this app automaticaly work the phone display turning on when the phone case is opened. On the other hand, it makes the display turnign Off when it's closed.",
 		"link"     : [
 				{"href" : "#",
 				"name"  : "Google Play"}
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "images/noimage.jpg",
+		"title"    : "Offshore Project",
+		"term"     : "Nov,2012 ~ Mar,2015",
+		"tag"      : ["Android", "COMPANY"],
+		"tool"     : ["Android", "Java", "Subversion", "Redmine"],
+		"position" : "Technical Advisor, Project Manager, Programmer",
+		"detail"   : "For starting offshore project, I tought our knowhow to develop, analyze and costomize Android PS to offshore team. In addition, we manage them how project can be going well. It means I did support somethings between offshore and Japan teams.",
+		"link"     : [
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "images/noimage.jpg",
+		"title"    : "Append Radiation Service into Android OS",
+		"term"     : "Apr,2011 ~ Sep,2011",
+		"tag"      : ["Android", "COMPANY"],
+		"tool"     : ["Android", "Java", "Subversion", "Redmine"],
+		"position" : "Project Manager, Programmer",
+		"detail"   : "Creating fremework and appending it into Android OS. The framework works managing the information from a radiate sensor which is attached into new product. Then, the service analyzes the information and send the result to only a internal specific App.",
+		"link"     : [
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "images/noimage.jpg",
+		"title"    : "Fundamental of Android class",
+		"term"     : "Sep,2010 ~ Nov,2010",
+		"tag"      : ["Android", "COMPANY"],
+		"tool"     : ["Android", "Java"],
+		"position" : "Assistant of the teacher",
+		"detail"   : "I made some presentation files for the teacher who will teach fundamental of Android Developing. It was helped what I could understand well what Android is. That's why my boss assigned me the project as a rookie.",
+		"link"     : [
 			]
 	}
 ]
