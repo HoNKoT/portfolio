@@ -44,7 +44,7 @@
 	}
 	,{
 		"type"     : "android",
-		"thumb"    : "images/afri-inc_screenshot.jpg",
+		"thumb"    : "images/automanner.jpg",
 		"title"    : "Auto Manner",
 		"term"     : "Oct,2011 ~ continue",
 		"tag"      : ["Android", "INDIVIDUAL"],
@@ -58,7 +58,7 @@
 	}
 	,{
 		"type"     : "android",
-		"thumb"    : "images/afri-inc_screenshot.jpg",
+		"thumb"    : "images/AWS.jpg",
 		"title"    : "Schedule AWS EC2 App",
 		"term"     : "Aug,2015 ~ continue",
 		"tag"      : ["Android", "INDIVIDUAL"],
@@ -72,7 +72,7 @@
 	}
 	,{
 		"type"     : "android",
-		"thumb"    : "",
+		"thumb"    : "images/noimage.jpg",
 		"title"    : "Customize AndroidOS for avoiding touch event",
 		"term"     : "Apr,2014 ~ May 2015",
 		"tag"      : ["Android", "COMPANY"],
@@ -84,7 +84,7 @@
 	}
 	,{
 		"type"     : "android",
-		"thumb"    : "",
+		"thumb"    : "images/noimage.jpg",
 		"title"    : "Customize Portal App for avoiding touch event",
 		"term"     : "Oct,2014 ~ May 2015",
 		"tag"      : ["Android", "COMPANY"],
@@ -96,7 +96,7 @@
 	}
 	,{
 		"type"     : "android",
-		"thumb"    : "images/afri-inc_screenshot.jpg",
+		"thumb"    : "images/quicksleep.jpg",
 		"title"    : "Quick Lock",
 		"term"     : "Jun,2015 ~ continue",
 		"tag"      : ["Android", "COMPANY"],
