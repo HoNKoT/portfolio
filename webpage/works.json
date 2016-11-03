@@ -17,11 +17,40 @@
 	,{
 		"type"     : "webdesign",
 		"thumb"    : "images/fukai_screenshot.jpg",
+		"title"    : "SHINMORI DENTAL CLINIC",
+		"term"     : "Sep,2016 ~ continue",
+		"tag"      : ["WORDPRESS", "INDIVIDUAL"],
+		"tool"     : ["WORDPRESS", "PHP", "Javascript", "illustrator", "Photoshop"],
+		"position" : "Web Designer, Graphic Designer",
+		"detail"   : "I created a website for Shinmori Dental Clinic in Japan, powered by WORDPRESS. The website is quite simple because any contents are the same to Kawakami Dental Clinic's one, which I created before. It can still give patients enough infomation.",
+		"link"     : [
+				{"href" : "#",
+				"name"  : "Kawakami Dental Clinic - SHINMORI branch"}
+			]
+	}
+	,{
+		"type"     : "webdesign",
+		"thumb"    : "images/fukai_screenshot.jpg",
 		"title"    : "FUKAI DENTAL CLINIC",
 		"term"     : "May,2016 ~ continue",
 		"tag"      : ["WORDPRESS", "INDIVIDUAL"],
+		"tool"     : ["WORDPRESS", "PHP", "Javascript", "illustrator", "Photoshop"],
 		"position" : "Web Designer, Graphic Designer",
-		"detail"   : "I created a website for Fukai Dental Clinic in Japan, powered by WORDPRESS. The website is quite simple because any contents are the same to Kawakami Dental Clinic's one, which I created before. It can still give patients enough infomation.",
+		"detail"   : "I created a website for Fukai Dental Clinic in Japan, powered by WORDPRESS. To create this website was quite challenging thing since this is also my first created a website, and for certain, the experience was also excited like this website looks.",
+		"link"     : [
+				{"href" : "#",
+				"name"  : "Kawakami Dental Clinic - Fukai branch"}
+			]
+	}
+	,{
+		"type"     : "android",
+		"thumb"    : "images/afri-inc_screenshot.jpg",
+		"title"    : "Auto Manner",
+		"term"     : "Oct,2011 ~ continue",
+		"tag"      : ["Android", "INDIVIDUAL"],
+		"tool"     : ["Android", "Java", "Bitbucket", "Redmine"],
+		"position" : "Project Manager, Programmer",
+		"detail"   : "This app can change Ring Mode automatically along the time schedule the user set in advance. Actually, the app has downloaded 30,000 times in total from the year I released in 2011. I still keep on maintaining it. Released this app was turning point to start developing Android App in my life.",
 		"link"     : [
 				{"href" : "#",
 				"name"  : "Kawakami Dental Clinic - Fukai branch"}
