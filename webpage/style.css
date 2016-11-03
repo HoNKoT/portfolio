@@ -423,6 +423,30 @@ section#works .w_ios dl:hover div>span, section#works .d_ios div>span {
 	/*border-color: transparent transparent #a4c600 transparent;*/
 }
 
+.balloon-top dl.left_3_left:after {
+	left: 17%;
+}
+
+.balloon-top dl.left_3_middle:after {
+	left: 50%;
+}
+
+.balloon-top dl.left_3_right:after {
+	left: 83%;
+}
+
+.balloon-top dl.left_2_left:after {
+	left: 25%;
+}
+
+.balloon-top dl.left_2_right:after {
+	left: 75%;
+}
+
+.balloon-top dl.left_1:after {
+	left: 15%;
+}
+
 .d_android:after {
 	border-color: transparent transparent #a4c600 transparent;
 }

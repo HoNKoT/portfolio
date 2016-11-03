@@ -260,19 +260,30 @@ var currentShowDetailIndex = -1;
 function clickWork(element, index) {
 	index = parseInt(index, 10);
 	var rowWorkCount = 1;
+	var fukidashiClass;
 	if (window.innerWidth > 991) {
 		// pc
 		rowWorkCount = 3;
+		switch (index % rowWorkCount) {
+			case 0: fukidashiClass = "left_3_left"; break;
+			case 1: fukidashiClass = "left_3_middle"; break;
+			case 2: fukidashiClass = "left_3_right"; break;
+		}
 	} else if (window.innerWidth > 767) {
 		// tab (row 2)
 		rowWorkCount = 2
+		switch (index % rowWorkCount) {
+			case 0: fukidashiClass = "left_2_left"; break;
+			case 1: fukidashiClass = "left_2_right"; break;
+		}
 	} else {
 		// sp (row 1)
 		rowWorkCount = 1;
+		fukidashiClass = "left_1";
 	}
 
 	var html =
-		"<dl class='border d_" + mReadData[index].type + "'>"
+		"<dl class='border d_" + mReadData[index].type + " " + fukidashiClass + "'>"
 		  + "<dd>"
             + "<h4>" + mReadData[index].title + "</h4>"
             + "<span>" + mReadData[index].term + "</span>"
