@@ -458,6 +458,10 @@ section#works .col-md-12 dl.border>dt>dl dt {
 	margin-left: 20px;
 }
 
+.detail {
+	display: none;
+}
+
 
 /* footer (contact) ---------------------------------------------------------------- */
 

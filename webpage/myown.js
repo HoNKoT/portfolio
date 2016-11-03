@@ -216,3 +216,15 @@ function animate(dir){
 	}
 }
 
+// for works click event -------------------------------------------------------
+
+$(function(){
+	$(".openBtn").click(function(event){
+		console.log(event);
+
+		$($(this).parent().nextAll(".detail:first")).animate( 
+			{height: "toggle", opacity: "toggle"},
+			"nomal");
+  });
+});
+
