@@ -289,9 +289,10 @@ section#works dl, section#works dl h4, section#works dl p, section#works dl span
 section#works dl div {
 	height: 30px;
 	margin: 5px 0px;
+	display: inline-block;
 }
 
-section#works dl div span {
+section#works dl div>span {
 	display: inline-block;
 	padding-top: 2px;
 	margin-right: 15px;
@@ -324,7 +325,12 @@ section#works article {
 }
 
 section#works article dt img {
+	margin-top:20px;
 	width: 100%;
+
+	border: 1px solid #ddd;
+	background-color: #eee;
+	padding: 5px;
 }
 
 section#works .w_android h4 {
@@ -335,7 +341,7 @@ section#works .w_android dl, section#works .d_android dl {
 	border-color: #a4c600;
 }
 
-section#works .w_android dl div span {
+section#works .w_android dl div>span {
 	background-color: #a4c600;
 }
 
@@ -343,7 +349,7 @@ section#works .w_android dl:hover {
 	background-color: #a4c600;
 }
 
-section#works .w_android dl:hover div span, section#works .d_android div span {
+section#works .w_android dl:hover div>span, section#works .d_android div>span {
 	background-color: white;
 	color: #a4c600;
 }
@@ -356,7 +362,7 @@ section#works .w_webdesign dl, section#works .d_webdesign dl.border {
 	border-color: #21759b;
 }
 
-section#works .w_webdesign dl div span {
+section#works .w_webdesign dl div>span {
 	background-color: #21759b;
 }
 
@@ -364,7 +370,7 @@ section#works .w_webdesign dl:hover {
 	background-color: #21759b;
 }
 
-section#works .w_webdesign dl:hover div span, section#works .d_webdesign div span {
+section#works .w_webdesign dl:hover div>span, section#works .d_webdesign div>span {
 	background-color: white;
 	color: #21759b;
 }
@@ -377,7 +383,7 @@ section#works .w_ios dl, section#works .d_ios dl.border {
 	border-color: #333;
 }
 
-section#works .w_ios dl div span {
+section#works .w_ios dl div>span {
 	background-color: #333;
 }
 
@@ -385,7 +391,7 @@ section#works .w_ios dl:hover {
 	background-color: #333;
 }
 
-section#works .w_ios dl:hover div span, section#works .d_ios div span {
+section#works .w_ios dl:hover div>span, section#works .d_ios div>span {
 	background-color: white;
 	color: #333;
 }
@@ -494,6 +500,13 @@ footer div, footer a {
 	width: 50%;
 }
 
+
+/* for tablet ---------------------------------------------------------------- */
+@media screen and (max-width: 991px) {
+
+
+}
+
 /* for smartphone ---------------------------------------------------------------- */
 @media screen and (max-width: 767px) {
 	body, p {
@@ -520,6 +533,7 @@ footer div, footer a {
 	}
 
 	section#works dl.border {
+		width: 100%;
 		padding-bottom: 20px;
 	}
 
@@ -541,6 +555,32 @@ footer div, footer a {
 		left: 0px;
 		top: 0px;
 	}*/
+	section#works article {
+		margin-bottom: 0px;
+	}
+
+	section#works article dt img {
+		margin-top:0px;
+		padding:2px;
+	}
+
+	section#works article.col-md-4 dl.border {
+		position: relative;
+		height: 160px;
+	}
+
+	section#works article.col-md-4 dl.border>div {
+		position: absolute;
+		top: 37px;
+		left: 160px;
+	}
+
+	section#works article.col-md-4 dl.border dt {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 120px;
+	}
 
 	section#works a, .row-eq-height {
 		display: static;
