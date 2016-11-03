@@ -440,6 +440,16 @@ section#works .d_android dl.border {
 	color: white;
 }
 
+section#works .d_webdesign dl.border {
+	background-color: #21759b;
+	color: white;
+}
+
+section#works .d_ios dl.border {
+	background-color: #333;
+	color: white;
+}
+
 section#works .col-md-12 dl.border div.tools {
 	height: auto;
 	margin-bottom: 20px;

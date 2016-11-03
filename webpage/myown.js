@@ -218,48 +218,142 @@ function animate(dir){
 	}
 }
 
-// for works click event -------------------------------------------------------
-
-$(function(){
-	$(".openBtn").click(function(event){
-		$($(this).parent().nextAll(".detail:first")).animate( 
-			{height: "toggle", opacity: "toggle"},
-			"nomal");
-	});
-});
-
-
 // for read json -------------------------------------------------------
 
-var readData;
+var mReadData;
 
 function readJson() {
-	$.getJSON("works.json" , function(data) {
-		readData = data;
+	if (mReadData == null) {
+		$.getJSON("works.json" , function(data) {
+			mReadData = data;
+			console.log(data);
 
-		for (var i = 0; i < readData.length; i++) {
-			var html =
-			 "<article class='w_" + readData[i].type + " col-md-4 col-sm-6 col-xs-12'>"
-			  + "<dl class='border'>"
-			    + "<div><dd><h4>" + readData[i].title + "</h4><span>" + readData[i].term + "</span></dd>"
-			    + "<div>";
+			for (var i = 0; i < mReadData.length; i++) {
+				var html =
+					 "<article class='w_" + mReadData[i].type + " col-md-4 col-sm-6 col-xs-12' onclick=\"clickWork(this, '" + i + "')\">"
+					  + "<dl class='border'>"
+					    + "<div>"
+					    	+ "<dd><h4 class='title'>" + mReadData[i].title + "</h4><span>" + mReadData[i].term + "</span></dd>"
+					    	+ "<div>";
 
-			for (var t = 0; t < readData[i].tag.length; t++) {
-				html += "<span>" + readData[i].tag[t] + "</span>";
+				for (var t = 0; t < mReadData[i].tag.length; t++) {
+					html +=		 "<span>" + mReadData[i].tag[t] + "</span>";
+				}
+				html +=		"</div>"
+						+ "</div>"
+					    + "<dt><img src='" + mReadData[i].thumb + "'></dt>"
+					  + "</dl>"
+					+ "</article>"
+					+ "<article class='detail d_" + mReadData[i].type + " balloon-top col-md-12 col-sm-12 col-xs-12'></article>";
+
+				$(".row-eq-height").append(html);
 			}
-			html +=
-			      "</div></div>"
-			    + "<dt><img src='" + readData[i].thumb + "'></dt>"
-			  + "</dl>"
-			+ "</article>";
-
-			console.log(html);
-			$(".row-eq-height").append(html);
-		}
-		// console.log(data);
-
-		// for(var i = 0; i < len; i++) {
-		// 	//ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
-		// }
-	});
+		});
+	}
 }
+
+// for works click event -------------------------------------------------------
+
+var currentShowIndex = -1;
+var currentShowDetailIndex = -1;
+
+function clickWork(element, index) {
+	console.log(parseInt(index, 10));
+	index = parseInt(index, 10);
+	var rowWorkCount = 1;
+	if (window.innerWidth > 991) {
+		// pc
+		rowWorkCount = 3;
+	} else if (window.innerWidth > 767) {
+		// tab (row 2)
+		rowWorkCount = 2
+	} else {
+		// sp (row 1)
+		rowWorkCount = 1;
+	}
+
+	var html =
+		"<dl class='border'>"
+		  + "<dd>"
+            + "<h4>" + mReadData[index].title + "</h4>"
+            + "<span>" + mReadData[index].term + "</span>"
+          + "</dd>"
+          + "<dt>"
+            + "<div class='tools'>";
+
+    for (var t = 0; t < mReadData[index].tool.length; t++) {
+		html += "<div><span>" + mReadData[index].tool[t] + "</span></div>";
+	}
+    html +=   "</div>"
+            + "<dl>"
+              + "<dd>POSITION</dd>"
+              + "<dt><p>" + mReadData[index].position + "</p></dt>"
+            + "</dl>"
+            + "<dl>"
+              + "<dd>DETAIL</dd>"
+              + "<dt><p>" + mReadData[index].detail + "</p></dt>"
+            + "</dl>";
+    if (mReadData[index].link.length > 0) {
+        html+="<dl>"
+              + "<dd>LINK</dd>"
+              + "<dt><a href='" + mReadData[index].link[0].href + "'>" + mReadData[index].link[0].name + "</a></dt>"
+            + "</dl>";
+    }
+    html  +="</dt>"
+        + "</dl>";
+
+    var column = (index % rowWorkCount) + 1;
+	var row = ((index + 1) / rowWorkCount);
+	row = Math.ceil(row);
+	var detailIndex = (row * rowWorkCount) - 1;
+	if (detailIndex >= mReadData.length) detailIndex = mReadData.length - 1;
+
+	console.log("index " + index + ", rowWorkCount " + rowWorkCount + ", row " + row + ", detailIndex " + detailIndex + ", column " + column);
+
+	// console.log($(".balloon-top:after").eq(detailIndex));
+	// $(".balloon-top:after").eq(detailIndex).css("left", (column * 25) + "%");
+	$(".detail").eq(detailIndex).html(html);
+
+	var actionShow = true;
+	console.log("current " + currentShowDetailIndex + ", detailIndex " + detailIndex);
+	if (currentShowDetailIndex == -1) {
+		actionShow = true;
+	} else {
+		if (currentShowIndex != index) {
+			if (currentShowDetailIndex != detailIndex) {
+				// hide current showed detail
+				$(".detail").eq(currentShowDetailIndex).animate( 
+					{height: "hide", opacity: "hide"},
+					"nomal");
+				actionShow = true;
+			} else {
+				// nothing to animate
+				currentShowIndex = index;
+				return;
+			}
+		} else {
+			actionShow = false;
+		}
+	}
+	if (actionShow) {
+		$(".detail").eq(detailIndex).animate( 
+			{height: "show", opacity: "show"},
+			"nomal");
+		currentShowIndex = index;
+		currentShowDetailIndex = detailIndex;
+	} else {
+		$(".detail").eq(detailIndex).animate( 
+			{height: "hide", opacity: "hide"},
+			"nomal");
+		currentShowIndex = -1;
+		currentShowDetailIndex = -1;
+	}
+}
+// $(function(){
+// 	$(".openBtn").click(function(event) {
+// 		console.log(event);
+// 		$($(this).parent().nextAll(".detail:first")).animate( 
+// 			{height: "toggle", opacity: "toggle"},
+// 			"nomal");
+// 	});
+// });
