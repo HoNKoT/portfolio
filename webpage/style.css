@@ -5,9 +5,9 @@ font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'Passion One', cursive;
 */
 /* colors
-android   : a4c600
-ios       : 333333
-webdesign : 21759b
+android   : a4c600 879e00
+ios       : 333333 222222
+webdesign : 21759b 0b6f99
 
                          light /  dark
 android circle border : ffff00 / 6d8701;
@@ -241,14 +241,23 @@ section#skills p span {
 
 /* main > works ---------------------------------------------------------------- */
 
+section#works {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
 section#works h3 {
 	text-align: center;
 }
 
 section#works a {
 	text-decoration: none;
-	display: block;
-	height: 100%;
+	font-weight: 300;
+	color: white;
+}
+
+section#works a span {
+	margin-right: 10px;
 }
 
 section#works h4 {
@@ -351,7 +360,7 @@ section#works .w_android dl:hover {
 
 section#works .w_android dl:hover div>span, section#works .d_android div>span {
 	background-color: white;
-	color: #a4c600;
+	color: #879e00;
 }
 
 section#works .w_webdesign h4 {
@@ -372,7 +381,7 @@ section#works .w_webdesign dl:hover {
 
 section#works .w_webdesign dl:hover div>span, section#works .d_webdesign div>span {
 	background-color: white;
-	color: #21759b;
+	color: #0b6f99;
 }
 
 section#works .w_ios h4 {
@@ -393,7 +402,7 @@ section#works .w_ios dl:hover {
 
 section#works .w_ios dl:hover div>span, section#works .d_ios div>span {
 	background-color: white;
-	color: #333;
+	color: #222;
 }
 
 /* adjust each work boxes' height */
@@ -457,6 +466,18 @@ section#works .w_ios dl:hover div>span, section#works .d_ios div>span {
 
 .d_webdesign:after {
 	border-color: transparent transparent #21759b transparent;
+}
+
+section#works .d_android a:hover {
+	color: #ffff00;
+}
+
+section#works .d_ios a:hover {
+	color: #fbb03b;
+}
+
+section#works .d_webdesign a:hover {
+	color: #7ac943;
 }
 
 section#works .detail dl.d_android {
@@ -597,8 +618,12 @@ footer div, footer a {
 		left: 0px;
 		top: 0px;
 	}*/
-	section#works article {
+	section#works article.col-md-4 {
 		margin-bottom: 0px;
+	}
+
+	section#work article.detail {
+		margin-bottom: 20px;
 	}
 
 	section#works article dt img {

@@ -309,7 +309,7 @@ function clickWork(element, index) {
     if (mReadData[index].link.length > 0) {
         html+="<dl>"
               + "<dd>LINK</dd>"
-              + "<dt><a href='" + mReadData[index].link[0].href + "'>" + mReadData[index].link[0].name + "</a></dt>"
+              + "<dt><a href='" + mReadData[index].link[0].href + "'><span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span>" + mReadData[index].link[0].name + "</a></dt>"
             + "</dl>";
     }
     html  +="</dt>"
