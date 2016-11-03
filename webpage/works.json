@@ -1,0 +1,30 @@
+[
+	{
+		"type"     : "android",
+		"thumb"    : "images/afri-inc_screenshot.jpg",
+		"title"    : "SENRI with Afri-inc",
+		"term"     : "Oct,2016 ~ continue",
+		"tag"      : ["Android", "COMPANY"],
+		"tool"     : ["Android", "Java", "Github", "Slack"],
+		"position" : "Programmer",
+		"detail"   : "I am supporting the start up comparny, which is Afri-inc, to develop its own Android Application. The firm is located in Africa and the App helps the customers as shering the sales and inventory infomation.",
+		"link"     : [
+				{"href" : "#",
+				"name"  : "Afri-inc"}
+			]
+	}
+
+	,{
+		"type"     : "webdesign",
+		"thumb"    : "images/fukai_screenshot.jpg",
+		"title"    : "FUKAI DENTAL CLINIC",
+		"term"     : "May,2016 ~ continue",
+		"tag"      : ["WORDPRESS", "INDIVIDUAL"],
+		"position" : "Web Designer, Graphic Designer",
+		"detail"   : "I created a website for Fukai Dental Clinic in Japan, powered by WORDPRESS. The website is quite simple because any contents are the same to Kawakami Dental Clinic's one, which I created before. It can still give patients enough infomation.",
+		"link"     : [
+				{"href" : "#",
+				"name"  : "Kawakami Dental Clinic - Fukai branch"}
+			]
+	}
+]

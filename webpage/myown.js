@@ -83,6 +83,9 @@ function window_load() {
 			}
 		}
 	}
+
+	// call reading json function
+	readJson();
 }
 
 $(function() {
@@ -130,7 +133,6 @@ function setCircleSize(container4circle) {
 	if (window.innerWidth < 640) scale = 0.3;
 	var circleWidth = Math.ceil(window.innerWidth * scale);
 	if (circleWidth % 2 > 0) circleWidth -= 1; // parse even
-	console.log("circleWidth :" + circleWidth);
 
 	container4circle.style.width = circleWidth + "px";
 	container4circle.style.height = circleWidth + "px";
@@ -220,11 +222,43 @@ function animate(dir){
 
 $(function(){
 	$(".openBtn").click(function(event){
-		console.log(event);
-
 		$($(this).parent().nextAll(".detail:first")).animate( 
 			{height: "toggle", opacity: "toggle"},
 			"nomal");
-  });
+	});
 });
 
+
+// for read json -------------------------------------------------------
+
+var readData;
+
+function readJson() {
+	$.getJSON("works.json" , function(data) {
+		readData = data;
+
+		for (var i = 0; i < readData.length; i++) {
+			var html =
+			 "<article class='w_" + readData[i].type + " col-md-4 col-sm-6 col-xs-12'>"
+			  + "<dl class='border'>"
+			    + "<div><dd><h4>" + readData[i].title + "</h4><span>" + readData[i].term + "</span></dd>"
+			    + "<div>";
+
+			for (var t = 0; t < readData[i].tag.length; t++) {
+				html += "<span>" + readData[i].tag[t] + "</span>";
+			}
+			html +=
+			      "</div>"
+			    + "<dt><img src='" + readData[i].thumb + "'></dt>"
+			  + "</dl>"
+			+ "</article>";
+
+			$(".row-eq-height").append(html);
+		}
+		// console.log(data);
+
+		// for(var i = 0; i < len; i++) {
+		// 	//ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
+		// }
+	});
+}
