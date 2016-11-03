@@ -16,7 +16,7 @@
 
 	,{
 		"type"     : "webdesign",
-		"thumb"    : "images/fukai_screenshot.jpg",
+		"thumb"    : "images/shinmori_screenshot.jpg",
 		"title"    : "SHINMORI DENTAL CLINIC",
 		"term"     : "Sep,2016 ~ continue",
 		"tag"      : ["WORDPRESS", "INDIVIDUAL"],
@@ -104,6 +104,8 @@
 		"position" : "Project Manager, Programmer",
 		"detail"   : "For the customers who use their smart phone with a phone case. Many people use it like little size of book. Then, this app automaticaly work the phone display turning on when the phone case is opened. On the other hand, it makes the display turnign Off when it's closed.",
 		"link"     : [
+				{"href" : "#",
+				"name"  : "Google Play"}
 			]
 	}
 ]
