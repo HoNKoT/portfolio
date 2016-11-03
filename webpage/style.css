@@ -409,17 +409,17 @@ section#works .w_ios dl:hover div>span, section#works .d_ios div>span {
 }
 
 /* balloon top */
-.balloon-top:after {
+.balloon-top dl:after {
 	content: "";
 	position: absolute;
-	top: -10px;
+	top: -20px;
 	left: 20%;
-	margin-left: -10px;
+	margin-left: -20px;
 	display: block;
 	width: 0px;
 	height: 0px;
 	border-style: solid;
-	border-width: 0 10px 10px 10px;
+	border-width: 0 20px 20px 20px;
 	/*border-color: transparent transparent #a4c600 transparent;*/
 }
 
@@ -435,17 +435,20 @@ section#works .w_ios dl:hover div>span, section#works .d_ios div>span {
 	border-color: transparent transparent #21759b transparent;
 }
 
-section#works .d_android dl.border {
+section#works .detail dl.d_android {
+	border: solid 1px #a4c600;
 	background-color: #a4c600;
 	color: white;
 }
 
-section#works .d_webdesign dl.border {
+section#works .detail dl.d_webdesign {
+	border: solid 1px #21759b;
 	background-color: #21759b;
 	color: white;
 }
 
-section#works .d_ios dl.border {
+section#works .detail dl.d_ios {
+	border: solid 1px #333;
 	background-color: #333;
 	color: white;
 }
@@ -548,7 +551,8 @@ footer div, footer a {
 
 	section#works dl.border {
 		width: 100%;
-		padding-bottom: 20px;
+		padding-bottom: 0px;
+		margin-bottom: 20px;
 	}
 
 /*	section#works .w_android dl.border {

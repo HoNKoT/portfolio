@@ -244,7 +244,7 @@ function readJson() {
 					    + "<dt><img src='" + mReadData[i].thumb + "'></dt>"
 					  + "</dl>"
 					+ "</article>"
-					+ "<article class='detail d_" + mReadData[i].type + " balloon-top col-md-12 col-sm-12 col-xs-12'></article>";
+					+ "<article class='detail balloon-top col-md-12 col-sm-12 col-xs-12'></article>";
 
 				$(".row-eq-height").append(html);
 			}
@@ -258,7 +258,6 @@ var currentShowIndex = -1;
 var currentShowDetailIndex = -1;
 
 function clickWork(element, index) {
-	console.log(parseInt(index, 10));
 	index = parseInt(index, 10);
 	var rowWorkCount = 1;
 	if (window.innerWidth > 991) {
@@ -273,7 +272,7 @@ function clickWork(element, index) {
 	}
 
 	var html =
-		"<dl class='border'>"
+		"<dl class='border d_" + mReadData[index].type + "'>"
 		  + "<dd>"
             + "<h4>" + mReadData[index].title + "</h4>"
             + "<span>" + mReadData[index].term + "</span>"
@@ -308,14 +307,14 @@ function clickWork(element, index) {
 	var detailIndex = (row * rowWorkCount) - 1;
 	if (detailIndex >= mReadData.length) detailIndex = mReadData.length - 1;
 
-	console.log("index " + index + ", rowWorkCount " + rowWorkCount + ", row " + row + ", detailIndex " + detailIndex + ", column " + column);
+	//console.log("index " + index + ", rowWorkCount " + rowWorkCount + ", row " + row + ", detailIndex " + detailIndex + ", column " + column);
 
 	// console.log($(".balloon-top:after").eq(detailIndex));
 	// $(".balloon-top:after").eq(detailIndex).css("left", (column * 25) + "%");
 	$(".detail").eq(detailIndex).html(html);
 
 	var actionShow = true;
-	console.log("current " + currentShowDetailIndex + ", detailIndex " + detailIndex);
+	//console.log("current " + currentShowDetailIndex + ", detailIndex " + detailIndex);
 	if (currentShowDetailIndex == -1) {
 		actionShow = true;
 	} else {
