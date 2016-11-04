@@ -133,7 +133,8 @@ function setCircleSize(container4circle) {
 	var activeBorder = container4circle.querySelector(".active-border");
 
 	var scale = 0.2;
-	if (window.innerWidth < 640) scale = 0.3;
+	if (window.innerWidth < 480) scale = 0.25;
+	else if (window.innerWidth < 640) scale = 0.3;
 	var circleWidth = Math.ceil(window.innerWidth * scale);
 	if (circleWidth % 2 > 0) circleWidth -= 1; // parse even
 

@@ -193,7 +193,7 @@ section#s_android h3, section#s_ios h3, section#s_webdesign h3 {
 section#skills p {
 	color: white;
 	font-size: 16px;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 section#skills p span {
@@ -214,7 +214,7 @@ section#skills p span {
 
 .prec {
     position: relative;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .circle {
@@ -242,8 +242,8 @@ section#skills p span {
 /* main > works ---------------------------------------------------------------- */
 
 section#works {
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 8%;
+	padding-right: 8%;
 }
 
 section#works h3 {
@@ -263,12 +263,13 @@ section#works a span {
 section#works h4 {
 	font-size: 20px;
 	margin: 0px;
+	margin-right: 20px;
 }
 
 section#works dd span {
 	color: gray;
 	font-size: 14px;
-	font-weight: 100;
+	font-weight: 500;
 	font-style: italic;
 }
 
@@ -310,13 +311,18 @@ section#works dl div>span {
 	width: 100px;
 	line-height: 1.25em;
 	font-size: 16px;
-	font-weight: 100;
+	font-weight: 300;
 	color: white;
+}
+
+section#works dl.col-md-4 div>span:last-child {
+	margin-right: 0px;
 }
 
 section#works dt p {
 	margin:0px;
 	padding-top: 2px;
+	font-weight: 300;
 	line-height: 1.375em;
 }
 
@@ -351,6 +357,7 @@ section#works .w_android dl, section#works .d_android dl {
 }
 
 section#works .w_android dl div>span {
+	font-weight: 300;
 	background-color: #a4c600;
 }
 
@@ -372,6 +379,7 @@ section#works .w_webdesign dl, section#works .d_webdesign dl.border {
 }
 
 section#works .w_webdesign dl div>span {
+	font-weight: 300;
 	background-color: #21759b;
 }
 
@@ -393,6 +401,7 @@ section#works .w_ios dl, section#works .d_ios dl.border {
 }
 
 section#works .w_ios dl div>span {
+	font-weight: 300;
 	background-color: #333;
 }
 
@@ -581,12 +590,13 @@ footer div, footer a {
 	}
 
 	section#topimage section {
-		top: 31%;
+		top: 20%;
+		width: 35%;
 	}
 
 	.icons img {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		margin: 60px 10px 0px 10px;
 	}
 
@@ -667,5 +677,22 @@ footer div, footer a {
 
 	footer #iconad {
 		padding-top:20px;
+	}
+}
+
+/* for smartphone ---------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+	section#works article.col-md-4 dl.border>div {
+		top: 26px;
+	}
+
+	section#works h4 {
+		margin-right: 15px;
+		font-size: 18px;
+	}
+
+	section#works {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
