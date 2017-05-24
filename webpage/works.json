@@ -5,19 +5,46 @@
 		"title"    : "SENRI with Afri-inc",
 		"term"     : "Oct,2016 ~ continue",
 		"tag"      : ["Android", "COMPANY"],
-		"tool"     : ["Android", "Java", "Github", "Slack"],
+		"tool"     : ["Android", "Java", "Kotlin", "Orma", "Retrofit", "Fabric", "Github", "Slack"],
 		"position" : "Programmer",
-		"detail"   : "I am supporting the start up comparny, which is Afri-inc, to develop its own Android Application. The firm is located in Africa and the App helps the customers as shering the sales and inventory infomation.",
+		"detail"   : "I am supporting the start up comparny, which is Afri-inc, to develop its own Android Application. The firm is located in Africa and the App helps the customers as shering the sales and inventory information. The application has sync to server function as well.",
 		"link"     : [
-				{"href" : "#",
+				{"href" : "http://afri-inc.com/en/",
 				"name"  : "Afri-inc"}
 			]
-	}
-
+	},
+	{
+		"type"     : "android",
+		"thumb"    : "images/wwword.jpg",
+		"title"    : "WWWORD",
+		"term"     : "Feb,2017 ~ continue",
+		"tag"      : ["Android", "SCHOOL PROJECT"],
+		"tool"     : ["Android", "Java", "Orma", "Github"],
+		"position" : "Programmer",
+		"detail"   : "This is for support application to keep remaining some vocaburary you want to get.",
+		"link"     : [
+				{"href" : "https://play.google.com/store/apps/details?id=jp.honkot.exercize.basic.wwword",
+				"name"  : "Afri-inc"}
+			]
+	},
+	{
+		"type"     : "android",
+		"thumb"    : "images/globalclock.jpg",
+		"title"    : "Global Clock",
+		"term"     : "Feb,2017 ~ continue",
+		"tag"      : ["Android", "SCHOOL PROJECT"],
+		"tool"     : ["Android", "Java", "Orma", "Fabric", "Github", "Slack"],
+		"position" : "Programmer",
+		"detail"   : "Comparing the time all over the world. It works well like checking the meeting time in Japan even you are in Canada",
+		"link"     : [
+				{"href" : "https://play.google.com/store/apps/details?id=jp.lovesalmon.globalclock",
+				"name"  : "Afri-inc"}
+			]
+	},
 	,{
 		"type"     : "webdesign",
 		"thumb"    : "images/shinmori_screenshot.jpg",
-		"title"    : "SHINMORI DENTAL CLINIC",
+		"title"    : "SHINMORI DENTAL CLINIC (CLOSED)",
 		"term"     : "Sep,2016 ~ continue",
 		"tag"      : ["WORDPRESS", "INDIVIDUAL"],
 		"tool"     : ["WORDPRESS", "PHP", "Javascript", "illustrator", "Photoshop"],
@@ -25,13 +52,13 @@
 		"detail"   : "I created a website for Shinmori Dental Clinic in Japan, powered by WORDPRESS. The website is quite simple because any contents are the same to Kawakami Dental Clinic's one, which I created before. It can still give patients enough infomation.",
 		"link"     : [
 				{"href" : "#",
-				"name"  : "Kawakami Dental Clinic - SHINMORI branch"}
+				"name"  : "Kawakami Dental Clinic - SHINMORI branch (Closed)"}
 			]
 	}
 	,{
 		"type"     : "webdesign",
 		"thumb"    : "images/fukai_screenshot.jpg",
-		"title"    : "FUKAI DENTAL CLINIC",
+		"title"    : "FUKAI DENTAL CLINIC (CLOSED)",
 		"term"     : "May,2016 ~ continue",
 		"tag"      : ["WORDPRESS", "INDIVIDUAL"],
 		"tool"     : ["WORDPRESS", "PHP", "Javascript", "illustrator", "Photoshop"],
@@ -39,7 +66,7 @@
 		"detail"   : "I created a website for Fukai Dental Clinic in Japan, powered by WORDPRESS. To create this website was quite challenging thing since this is also my first created a website, and for certain, the experience was also excited like this website looks.",
 		"link"     : [
 				{"href" : "#",
-				"name"  : "Kawakami Dental Clinic - Fukai branch"}
+				"name"  : "Kawakami Dental Clinic - Fukai branch (Closed)"}
 			]
 	}
 	,{
@@ -52,24 +79,8 @@
 		"position" : "Project Manager, Programmer",
 		"detail"   : "This app can change Ring Mode automatically along the time schedule the user set in advance. Actually, the app has downloaded 30,000 times in total from the year I released in 2011. I still keep on maintaining it. Released this app was turning point to start developing Android App in my life.",
 		"link"     : [
-				{"href" : "#",
-				"name"  : "Google Play"},
-				{"href" : "#",
+				{"href" : "https://play.google.com/store/apps/details?id=jp.chau2chaun2.mannerstimer",
 				"name"  : "Google Play"}
-			]
-	}
-	,{
-		"type"     : "ios",
-		"thumb"    : "images/automanner.jpg",
-		"title"    : "Auto Manner for iPhone",
-		"term"     : "Oct,2018",
-		"tag"      : ["iPhone", "INDIVIDUAL"],
-		"tool"     : ["iPhone", "Swift", "Bitbucket"],
-		"position" : "Project Manager, Programmer",
-		"detail"   : "I might be done.",
-		"link"     : [
-				{"href" : "#",
-				"name"  : "Apple store"}
 			]
 	}
 	,{
@@ -82,7 +93,7 @@
 		"position" : "Project Manager, Programmer",
 		"detail"   : "As producting a new smart phone which has a keyboard and NO TOUCH PANEL. My work was mainly editing layout files because the device has low resolution and many functions for the special device. Then, I also did managing the project.",
 		"link"     : [
-				{"href" : "#",
+				{"href" : "https://play.google.com/store/apps/details?id=jp.chau2chaun2.ec2scheduler",
 				"name"  : "Google Play"}
 			]
 	}
@@ -120,7 +131,7 @@
 		"position" : "Project Manager, Programmer",
 		"detail"   : "For the customers who use their smart phone with a phone case. Many people use it like little size of book. Then, this app automaticaly work the phone display turning on when the phone case is opened. On the other hand, it makes the display turnign Off when it's closed.",
 		"link"     : [
-				{"href" : "#",
+				{"href" : "https://play.google.com/store/apps/details?id=jp.chau2chaun2.quicksleep",
 				"name"  : "Google Play"}
 			]
 	}
