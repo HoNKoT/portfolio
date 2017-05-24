@@ -12,8 +12,8 @@
 				{"href" : "http://afri-inc.com/en/",
 				"name"  : "Afri-inc"}
 			]
-	},
-	{
+	}
+	,{
 		"type"     : "android",
 		"thumb"    : "images/wwword.jpg",
 		"title"    : "WWWORD",
@@ -26,8 +26,8 @@
 				{"href" : "https://play.google.com/store/apps/details?id=jp.honkot.exercize.basic.wwword",
 				"name"  : "Google Play"}
 			]
-	},
-	{
+	}
+	,{
 		"type"     : "android",
 		"thumb"    : "images/globalclock.jpg",
 		"title"    : "Global Clock",
@@ -40,7 +40,7 @@
 				{"href" : "https://play.google.com/store/apps/details?id=jp.lovesalmon.globalclock",
 				"name"  : "Google Play"}
 			]
-	},
+	}
 	,{
 		"type"     : "webdesign",
 		"thumb"    : "images/shinmori_screenshot.jpg",
